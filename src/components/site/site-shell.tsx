@@ -14,7 +14,6 @@ import {
   Phone,
   Sparkles,
   Star,
-  Trees,
   Users,
   X,
 } from "lucide-react";
