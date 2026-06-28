@@ -14,7 +14,6 @@ import {
   LucideIcon,
   MapPinned,
   Mountain,
-  ParkingCircle,
   ShieldCheck,
   Sparkles,
   Trees,
@@ -119,6 +118,7 @@ import mallRoadImage from "@/assets/Mall-Road.jpg";
 import jakhuImage from "@/assets/Jakhu-Temple.jpg";
 import gaietyImage from "@/assets/Gaiety-Theatre.jpg";
 import lakkarImage from "@/assets/Lakkar-Bazaar.jpg";
+import Garden from "@/assets/garden.jpeg"
 
 
 
@@ -175,40 +175,16 @@ export const navigationItems = [
 export const roomTypes = ["Super Deluxe", "Standard Room", "Family Suite"];
 
 export const rooms: Room[] = [
-  {
-    slug: "super-deluxe",
-    name: "Super Deluxe",
-    shortName: "Super Deluxe",
-    tagline: "Refined mountain comfort with warm timber detailing and a soaking tub.",
-    image: ROOM_SUPER_DELUXE_IMAGE,
-    alt: "Super Deluxe room with king bed at Hotel Woodland Shimla",
-    size: "Approx. 144 sq ft",
-    occupancy: "2 guests",
-    pricing: "Pricing placeholder — connect booking engine later",
-    description:
-      "Designed for slower mornings and longer stays, the Super Deluxe room pairs rich wood finishes, premium bedding and a calm Shimla palette with the comfort of an attached bathtub.",
-    longDescription: [
-      "The Super Deluxe room is ideal for couples and discerning leisure travellers seeking a more indulgent stay just moments from The Ridge.",
-      "Layered textures, soft lighting, a king bed, electric kettle and an inviting bathing experience make this the most balanced choice for guests who want both location and ease.",
-    ],
-    amenities: ["King bed", "Bathtub", "Valley-facing atmosphere", "Electric kettle", "Premium bedding", "Hot & cold water"],
-    highlights: [
-      { label: "Bed", value: "King Bed", icon: BedDouble },
-      { label: "Bath", value: "Bathtub", icon: Bath },
-      { label: "View", value: "Valley View", icon: Mountain },
-      { label: "Refreshments", value: "Electric Kettle", icon: Coffee },
-    ],
-  },
-  {
-    slug: "standard-room",
-    name: "Standard Room",
+    {
+    slug: "standard-room ",
+    name: "Standard Room ",
     shortName: "Standard",
     tagline: "A polished comfort stay with cozy textures and boutique warmth.",
-    image: ROOM_STANDARD_IMAGE,
+    image: ROOM_SUPER_DELUXE_IMAGE,
     alt: "Standard room with wood feature wall at Hotel Woodland Shimla",
-    size: "Comfort stay",
+    size: "Comfort stay ₹2500",
     occupancy: "2 guests",
-    pricing: "Pricing placeholder — connect booking engine later",
+    pricing: "₹2500 per night",
     description:
       "The Standard Room offers a quieter, intimate stay with premium bedding, handcrafted wood elements and an inviting window-side seating moment.",
     longDescription: [
@@ -224,15 +200,39 @@ export const rooms: Room[] = [
     ],
   },
   {
+    slug: "super-deluxe",
+    name: "Super Deluxe",
+    shortName: "Super Deluxe",
+    tagline: "Refined mountain comfort with warm timber detailing and a soaking tub.",
+    image: ROOM_STANDARD_IMAGE,
+    alt: "Super Deluxe room with king bed at Hotel Woodland Shimla",
+    size: "Approx. 144 sq ft ₹3500 ",
+    occupancy: "2 guests",
+    pricing: "₹3500 per night",
+    description:
+      "Designed for slower mornings and longer stays, the Super Deluxe room pairs rich wood finishes, premium bedding and a calm Shimla palette with the comfort of an attached bathtub.",
+    longDescription: [
+      "The Super Deluxe room is ideal for couples and discerning leisure travellers seeking a more indulgent stay just moments from The Ridge.",
+      "Layered textures, soft lighting, a king bed, electric kettle and an inviting bathing experience make this the most balanced choice for guests who want both location and ease.",
+    ],
+    amenities: ["King bed", "Bathtub", "Valley-facing atmosphere", "Electric kettle", "Premium bedding", "Hot & cold water"],
+    highlights: [
+      { label: "Bed", value: "King Bed", icon: BedDouble },
+      { label: "Bath", value: "Bathtub", icon: Bath },
+      { label: "View", value: "Valley View", icon: Mountain },
+      { label: "Refreshments", value: "Electric Kettle", icon: Coffee },
+    ],
+  },
+  {
     slug: "family-suite",
     name: "Family Suite",
     shortName: "Family Suite",
     tagline: "A practical, spacious layout for shared mountain getaways.",
     image: ROOM_FAMILY_SUITE_IMAGE,
     alt: "Family suite with multiple beds at Hotel Woodland Shimla",
-    size: "Family layout",
+    size: "Family layout ₹4000",
     occupancy: "3–4 guests",
-    pricing: "Pricing placeholder — connect booking engine later",
+    pricing: "₹4000 per night",
     description:
       "The Family Suite is tailored for longer hill stays with multiple beds, a generous floor plan and an easy-going atmosphere for families and small groups.",
     longDescription: [
@@ -252,7 +252,6 @@ export const rooms: Room[] = [
 export const amenities: Amenity[] = [
   { title: "Restaurant", description: "Indian and Chinese cuisine served in a warm, relaxed dining room.", icon: Utensils },
   { title: "High-Speed WiFi", description: "Reliable connectivity across rooms and shared spaces.", icon: Wifi },
-  { title: "Parking", description: "Convenient on-site parking support for arriving guests.", icon: ParkingCircle },
   { title: "Garden", description: "Green corners that soften the urban hill-station pace.", icon: Flower2 },
   { title: "Terrace", description: "Open-air pockets for morning light and evening air.", icon: Trees },
   { title: "Laundry", description: "Helpful support for longer stays and family travel.", icon: Sparkles },
@@ -388,10 +387,6 @@ export const faqs = [
     answer: "Yes. The hotel is positioned near The Ridge area, making it convenient for guests who want to explore Shimla’s heritage core on foot or with short local transfers.",
   },
   {
-    question: "Does the hotel have parking?",
-    answer: "Yes, parking support is available. Guests are encouraged to coordinate before arrival so the team can guide access smoothly.",
-  },
-  {
     question: "Are pets allowed or extra beds available?",
     answer: "Pets are not allowed, and extra beds are not available according to the current policy set.",
   },
@@ -468,9 +463,7 @@ export const galleryImages = [
   { src: ROOM_FAMILY_SUITE_IMAGE, alt: "Family Suite room interior", category: "Rooms" },
   { src: LOUNGE_IMAGE, alt: "Guest lounge seating area", category: "Facilities" },
   { src: DINING_RESTAURANT_IMAGE, alt: "Placeholder image for restaurant interior replacement", category: "Dining" },
-  { src: BREAKFAST_IMAGE, alt: "Placeholder image for breakfast table replacement", category: "Dining" },
-  { src: GARDEN_TERRACE_IMAGE, alt: "Placeholder image for garden and terrace replacement", category: "Terrace" },
-  { src: VALLEY_VIEW_IMAGE, alt: "Placeholder image for valley view replacement", category: "Views" },
+  { src: Garden, alt: "Placeholder image for valley view replacement", category: "Views" },
 ];
 
 export const stats = [

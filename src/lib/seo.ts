@@ -61,7 +61,6 @@ export function websiteSchema() {
     sameAs: [MAPS_URL],
     amenityFeature: [
       "Restaurant",
-      "Parking",
       "WiFi",
       "Garden",
       "Terrace",

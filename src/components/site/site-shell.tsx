@@ -22,6 +22,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import woodlandLogo from "@/assets/woodland-logo.png";
 import outside from "@/assets/outside.jpeg";
 import outside1 from "@/assets/outside1.jpeg";
+import garden from "@/assets/garden.jpeg";
 
 
 import { Button } from "@/components/ui/button";

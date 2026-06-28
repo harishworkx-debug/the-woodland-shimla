@@ -7,7 +7,7 @@ export const Route = createFileRoute("/faq")({
   head: () =>
     buildPageHead({
       title: "FAQ — Hotel Woodland Shimla",
-      description: "Frequently asked questions about staying at Hotel Woodland Shimla — check-in, parking, dining and more.",
+      description: "Frequently asked questions about staying at Hotel Woodland Shimla — check-in, dining and more.",
       path: "/faq",
       image: EXTERIOR_DAY_IMAGE,
       scripts: [jsonLdScript(faqSchema(faqs)), jsonLdScript(defaultBreadcrumb("FAQ", "/faq"))],
