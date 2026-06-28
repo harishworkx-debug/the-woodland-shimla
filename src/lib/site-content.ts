@@ -160,6 +160,35 @@ import { fromTheme } from "tailwind-merge";
 
 
 
+import outside21 from '@/assets/outside21.jpeg'
+import outside22 from '@/assets/outside22.jpeg'
+import room14 from '@/assets/room14.jpg';
+import room15 from '@/assets/room15.jpeg';
+import room16 from '@/assets/room16.jpeg';
+import room17 from '@/assets/room17.jpeg';
+import room18 from '@/assets/room18.jpeg';
+import room19 from '@/assets/room19.jpeg';
+import room20 from '@/assets/room20,jpeg.jpeg';
+import room21 from '@/assets/room21,jpeg.jpeg';
+import room22 from '@/assets/room22,jpeg.jpeg';
+import room23 from '@/assets/room23,jpeg.jpeg';
+import room24 from '@/assets/room24,jpeg.jpeg';
+import room25 from '@/assets/room25,jpeg.jpeg';
+import room26 from '@/assets/room26,jpeg.jpeg';
+import room27 from '@/assets/room27,jpeg.jpeg';
+import room28 from '@/assets/room28,jpeg.jpeg';
+import room29 from '@/assets/room29,jpeg.jpeg';
+import room30 from '@/assets/room30,jpeg.jpeg';
+
+
+
+
+
+
+
+
+
+
 
 
 export const HERO_EXTERIOR_IMAGE = heroExterior;
@@ -511,6 +540,10 @@ export const galleryImages = [
   { src: outside18, alt: "Hotel exterior view 15", category: "Exterior" },
   { src: outside19, alt: "Hotel exterior view 15", category: "Exterior" },
   { src: outside20, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside21, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside22, alt: "Hotel exterior view 15", category: "Exterior" },
+
+
 
   { src: room, alt: "Room interior view 1", category: "Rooms" },
   { src: room2, alt: "Room interior view 2", category: "Rooms" },
@@ -519,6 +552,24 @@ export const galleryImages = [
   { src: room5, alt: "Room interior view 5", category: "Rooms" },
   { src: room6, alt: "Room interior view 6", category: "Rooms" },
   { src: room11, alt: "Room interior view 7", category: "Rooms" },
+  { src: room14, alt: "Room interior view 7", category: "Rooms" },
+  { src: room15, alt: "Room interior view 7", category: "Rooms" },
+  { src: room16, alt: "Room interior view 7", category: "Rooms" },
+  { src: room17, alt: "Room interior view 7", category: "Rooms" },
+  { src: room18, alt: "Room interior view 7", category: "Rooms" },
+  { src: room19, alt: "Room interior view 7", category: "Rooms" },
+  { src: room20, alt: "Room interior view 7", category: "Rooms" },
+  { src: room21, alt: "Room interior view 7", category: "Rooms" },
+  { src: room22, alt: "Room interior view 7", category: "Rooms" },
+  { src: room23, alt: "Room interior view 7", category: "Rooms" },
+  { src: room24, alt: "Room interior view 7", category: "Rooms" },
+  { src: room25, alt: "Room interior view 7", category: "Rooms" },
+  { src: room26, alt: "Room interior view 7", category: "Rooms" },
+  { src: room27, alt: "Room interior view 7", category: "Rooms" },
+  { src: room28, alt: "Room interior view 7", category: "Rooms" },
+  { src: room29, alt: "Room interior view 7", category: "Rooms" },
+  { src: room30, alt: "Room interior view 7", category: "Rooms" },
+
   { src: LOUNGE_IMAGE, alt: "Guest lounge seating area", category: "Facilities" },
   { src: food, alt: "Dining food presentation 1", category: "Dining" },
   { src: food1, alt: "Dining food presentation 2", category: "Dining" },
