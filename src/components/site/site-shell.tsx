@@ -711,7 +711,7 @@ export function GallerySection({
   preview?: boolean;
   onImageOpen?: (image: { src: string; alt: string }) => void;
 }) {
-  const items = preview ? galleryImages.slice(0, 6) : galleryImages;
+  const items = preview ? galleryImages.slice(0, 12) : galleryImages;
   return (
     <section className="section-shell">
       <Reveal className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">

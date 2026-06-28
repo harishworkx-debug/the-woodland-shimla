@@ -38,6 +38,13 @@ import outside12 from "@/assets/outside12.jpeg";
 import outside13 from "@/assets/outside13.jpeg";
 import outside14 from "@/assets/outside14.jpeg";
 import outside15 from "@/assets/outside15.jpeg";
+import outside16 from "@/assets/outside16.jpeg";
+import outside17 from "@/assets/outside17.jpeg";
+import outside18 from "@/assets/outside18.jpeg";
+import outside19 from "@/assets/outside19.jpeg";
+import outside20 from "@/assets/outside20.jpeg";
+
+
 
 // Room images
 import room from "@/assets/room.jpg";
@@ -499,6 +506,12 @@ export const galleryImages = [
   { src: outside13, alt: "Hotel exterior view 13", category: "Exterior" },
   { src: outside14, alt: "Hotel exterior view 14", category: "Exterior" },
   { src: outside15, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside16, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside17, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside18, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside19, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: outside20, alt: "Hotel exterior view 15", category: "Exterior" },
+
   { src: room, alt: "Room interior view 1", category: "Rooms" },
   { src: room2, alt: "Room interior view 2", category: "Rooms" },
   { src: room3, alt: "Room interior view 3", category: "Rooms" },
