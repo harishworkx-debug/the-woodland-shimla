@@ -1010,7 +1010,7 @@ export function SisterPropertySection() {
               <span>4.7★ rated</span>
             </div>
             <div className="mt-2 flex flex-wrap gap-4">
-              <Button asChild variant="luxe" size="lg">
+              <Button asChild variant="hero" size="lg">
                 <a href="https://www.thewoodlandhotels.com" target="_blank" rel="noreferrer">
                   Visit Kandaghat website
                 </a>
