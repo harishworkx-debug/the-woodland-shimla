@@ -112,7 +112,7 @@ function SiteHeader() {
             </div>
             <div className="min-w-0">
               <div className="truncate font-sans text-[0.68rem] uppercase tracking-[0.24em] text-muted-foreground">
-                Woodland Collection
+                The Woodland 
               </div>
               <div className="truncate text-lg font-semibold text-foreground">Shimla</div>
             </div>
