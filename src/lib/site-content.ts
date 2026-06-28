@@ -100,19 +100,21 @@ export const ADDRESS_LINES = [
   "Himachal Pradesh 171001",
 ];
 
-// Uploaded hotel photography — replace these URLs only when newer approved hotel photos are available.
-export const HERO_EXTERIOR_IMAGE =
-  "/__l5e/assets-v1/1ff45c48-5b07-41bb-ab15-79aa28a1cd1d/woodland-exterior-hero.png";
-export const EXTERIOR_DAY_IMAGE =
-  "/__l5e/assets-v1/6e7b46ec-35dd-4318-a992-ff2d99b7c546/woodland-exterior-hillside.png";
-export const ROOM_SUPER_DELUXE_IMAGE =
-  "/__l5e/assets-v1/98c79ee1-c59d-4343-8358-fc8ac1dcec4d/woodland-room-super-deluxe.png";
-export const ROOM_STANDARD_IMAGE =
-  "/__l5e/assets-v1/2fffeb33-ba29-41c4-97e8-60b04a262a85/woodland-room-standard.png";
-export const ROOM_FAMILY_SUITE_IMAGE =
-  "/__l5e/assets-v1/d1c28788-907f-431b-9972-d01ce2fd4c4f/woodland-room-family-suite.png";
-export const LOUNGE_IMAGE =
-  "/__l5e/assets-v1/d3aca02a-0bc1-47f0-9ebc-b696eb07403f/woodland-lounge.png";
+// Uploaded hotel photography — imported directly from src/assets.
+import heroExterior from "@/assets/woodland-exterior-hero.png";
+import exteriorHillside from "@/assets/woodland-exterior-hillside.png";
+import roomSuperDeluxe from "@/assets/woodland-room-super-deluxe.png";
+import roomStandard from "@/assets/woodland-room-standard.png";
+import roomFamilySuite from "@/assets/woodland-room-family-suite.png";
+import loungeImage from "@/assets/woodland-lounge.png";
+
+export const HERO_EXTERIOR_IMAGE = heroExterior;
+export const EXTERIOR_DAY_IMAGE = exteriorHillside;
+export const ROOM_SUPER_DELUXE_IMAGE = roomSuperDeluxe;
+export const ROOM_STANDARD_IMAGE = roomStandard;
+export const ROOM_FAMILY_SUITE_IMAGE = roomFamilySuite;
+export const LOUNGE_IMAGE = loungeImage;
+
 
 // Premium placeholders for future replacement — replace these once approved brand photography is ready.
 export const DINING_RESTAURANT_IMAGE =
