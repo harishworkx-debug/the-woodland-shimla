@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shimla.thewoodlandhotels.com/sitemap.xml
