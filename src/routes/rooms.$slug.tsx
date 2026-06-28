@@ -41,9 +41,9 @@ function RoomDetail() {
           <h2 className="section-title text-5xl text-foreground sm:text-6xl">{room.name}</h2>
         </div>
         <div className="prose-luxury space-y-5">
-          {room.longDescription.map((p) => <p key={p}>{p}</p>)}
+          {room.longDescription.map((p: string) => <p key={p}>{p}</p>)}
           <div className="grid gap-3 sm:grid-cols-2">
-            {room.amenities.map((a) => (
+            {room.amenities.map((a: string) => (
               <div key={a} className="rounded-[1.2rem] border border-border bg-surface px-4 py-3 text-sm">{a}</div>
             ))}
           </div>
