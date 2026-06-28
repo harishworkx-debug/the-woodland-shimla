@@ -20,6 +20,9 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import woodlandLogo from "@/assets/woodland-logo.png";
+import outside from "@/assets/outside.jpeg";
+import outside1 from "@/assets/outside1.jpeg";
+
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -132,9 +135,9 @@ function SiteHeader() {
               </Link>
             ))}
             <div className="group relative ml-1">
-              <button className="flex items-center gap-2 rounded-full px-4 py-2 text-sm text-foreground/80 transition hover:bg-panel hover:text-foreground">
+              {/* <button className="flex items-center gap-2 rounded-full px-4 py-2 text-sm text-foreground/80 transition hover:bg-panel hover:text-foreground">
                 More <ChevronDown className="h-4 w-4" />
-              </button>
+              </button> */}
               <div className="pointer-events-none absolute right-0 top-full mt-2 w-60 translate-y-2 rounded-[1.5rem] border border-border bg-panel p-2 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
                 {navigationItems.slice(8).map((item) => (
                   <Link
@@ -227,12 +230,12 @@ function SiteFooter() {
                 {WHATSAPP_DISPLAY}
               </a>
             </div>
-            <div>
+            {/* <div>
               <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">Email placeholder</div>
               <a href={`mailto:${EMAIL_PLACEHOLDER}`} className="mt-3 block text-lg text-primary-foreground">
                 {EMAIL_PLACEHOLDER}
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -687,10 +690,10 @@ export function DiningSection({ preview = false }: { preview?: boolean }) {
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="image-mask aspect-[0.96]">
-                <img src={preview ? DINING_RESTAURANT_IMAGE : DINING_RESTAURANT_IMAGE} alt="Placeholder restaurant image for future Woodland dining photography replacement" className="h-full w-full object-cover" loading="lazy" />
+                <img src={outside} alt="Placeholder restaurant image for future Woodland dining photography replacement" className="h-full w-full object-cover" loading="lazy" />
               </div>
               <div className="image-mask aspect-[0.96]">
-                <img src={preview ? BREAKFAST_IMAGE : CHEF_STORY_IMAGE} alt="Placeholder food or chef image for future Woodland dining photography replacement" className="h-full w-full object-cover" loading="lazy" />
+                <img src={outside1} alt="Placeholder food or chef image for future Woodland dining photography replacement" className="h-full w-full object-cover" loading="lazy" />
               </div>
             </div>
           </div>
@@ -964,7 +967,7 @@ export function InstagramGrid({ onImageOpen }: { onImageOpen?: (image: { src: st
           <button key={`${item.src}-${index}`} type="button" onClick={() => onImageOpen?.({ src: item.src, alt: item.alt })} className="group overflow-hidden rounded-[1.4rem]">
             <div className="image-mask aspect-square rounded-[1.4rem]">
               <img src={item.src} alt={item.alt} className="image-mask-inner" loading="lazy" />
-            </div>
+            </div> 
           </button>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell, PageHero, ReviewsSection } from "@/components/site/site-shell";
-import { REVIEW_GUEST_IMAGE } from "@/lib/site-content";
+import { REVIEW_GUEST_IMAGE, REVIEW_BG_IMAGE } from "@/lib/site-content";
 import { buildPageHead, defaultBreadcrumb, jsonLdScript, reviewSchema } from "@/lib/seo";
 
 export const Route = createFileRoute("/reviews")({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/reviews")({
   component: () => (
     <SiteShell>
       <PageHero
-        image={REVIEW_GUEST_IMAGE}
+        image={REVIEW_BG_IMAGE}
         eyebrow="Guest reviews"
         title="Stories from past stays."
         description="Trusted reflections from guests who chose Hotel Woodland Shimla."

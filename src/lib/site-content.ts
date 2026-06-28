@@ -107,6 +107,23 @@ import roomSuperDeluxe from "@/assets/woodland-room-super-deluxe.png";
 import roomStandard from "@/assets/woodland-room-standard.png";
 import roomFamilySuite from "@/assets/woodland-room-family-suite.png";
 import loungeImage from "@/assets/woodland-lounge.png";
+import outsideImage from "@/assets/outside.jpeg";
+import outside1Image from "@/assets/outside1.jpeg";
+import outside2Image from "@/assets/outside2.jpeg";
+import outside3Image from "@/assets/outside3.jpeg";
+import diningImage from "@/assets/dinning.jpeg";
+import reviewBgImage from "@/assets/review-bg.jpeg";
+import attractionsHeaderImage from "@/assets/the attraction header.jpg";
+import ridgeImage from "@/assets/The-Ridge.jpg";
+import mallRoadImage from "@/assets/Mall-Road.jpg";
+import jakhuImage from "@/assets/Jakhu-Temple.jpg";
+import gaietyImage from "@/assets/Gaiety-Theatre.jpg";
+import lakkarImage from "@/assets/Lakkar-Bazaar.jpg";
+
+
+
+
+
 
 export const HERO_EXTERIOR_IMAGE = heroExterior;
 export const EXTERIOR_DAY_IMAGE = exteriorHillside;
@@ -115,10 +132,11 @@ export const ROOM_STANDARD_IMAGE = roomStandard;
 export const ROOM_FAMILY_SUITE_IMAGE = roomFamilySuite;
 export const LOUNGE_IMAGE = loungeImage;
 
+export const ATTRACTIONS_HEADER_IMAGE = attractionsHeaderImage;
 
 // Premium placeholders for future replacement — replace these once approved brand photography is ready.
-export const DINING_RESTAURANT_IMAGE =
-  "/__l5e/assets-v1/c184a76a-6533-4bc0-97a0-2c38f59c268f/dining-restaurant.jpg";
+export const DINING_RESTAURANT_IMAGE = diningImage;
+export const REVIEW_BG_IMAGE = reviewBgImage;
 export const CHEF_STORY_IMAGE =
   "/__l5e/assets-v1/a2dca6a0-6c8b-487d-8cfe-3b9e38bf1665/chef-story.jpg";
 export const GARDEN_TERRACE_IMAGE =
@@ -127,11 +145,11 @@ export const BREAKFAST_IMAGE =
   "/__l5e/assets-v1/e486c2e6-0365-4f35-8af6-85b6c8941605/breakfast-table.jpg";
 export const VALLEY_VIEW_IMAGE =
   "/__l5e/assets-v1/5f7c0cb5-bb3c-4293-8cb3-c08529f9dd4b/valley-morning.jpg";
-export const RIDGE_IMAGE = "/__l5e/assets-v1/8fafe7ff-0ed3-4afe-b4af-a23d00269171/shimla-ridge.jpg";
-export const MALL_ROAD_IMAGE = "/__l5e/assets-v1/4d6238f3-7d8c-4b32-a358-201e08cd6ff8/mall-road.jpg";
-export const JAKHU_IMAGE = "/__l5e/assets-v1/54152a07-4bc2-4665-95ca-0093e0165088/jakhu-temple.jpg";
-export const GAIETY_IMAGE = "/__l5e/assets-v1/e0364e1c-c5dc-4bce-b64f-ff9fce9a8486/gaiety-theatre.jpg";
-export const LAKKAR_IMAGE = "/__l5e/assets-v1/153eb3d1-427d-49dd-8e64-a99306a6c399/lakkar-bazaar.jpg";
+export const RIDGE_IMAGE = ridgeImage;
+export const MALL_ROAD_IMAGE = mallRoadImage;
+export const JAKHU_IMAGE = jakhuImage;
+export const GAIETY_IMAGE = gaietyImage;
+export const LAKKAR_IMAGE = lakkarImage;
 export const REVIEW_GUEST_IMAGE =
   "/__l5e/assets-v1/e1e0b381-6d06-4f97-a26b-71f0aac0a96a/review-guest.jpg";
 export const BLOG_HERITAGE_IMAGE =
@@ -276,16 +294,6 @@ export const attractions: Attraction[] = [
     travelTime: "Approx. 20–25 min",
     description:
       "A spiritual high point framed by deodar forests, mountain air and panoramic views.",
-  },
-  {
-    slug: "hanuman-statue",
-    title: "Hanuman Statue",
-    image: JAKHU_IMAGE,
-    alt: "Placeholder image representing the Hanuman Statue in Shimla",
-    distance: "Near Jakhu Temple",
-    travelTime: "Approx. 20–25 min",
-    description:
-      "An iconic skyline presence and one of the most memorable vantage experiences in town.",
   },
   {
     slug: "gaiety-theatre",
@@ -451,6 +459,10 @@ export const blogPosts: BlogPost[] = [
 export const galleryImages = [
   { src: HERO_EXTERIOR_IMAGE, alt: "Hotel Woodland Shimla exterior hero view", category: "Exterior" },
   { src: EXTERIOR_DAY_IMAGE, alt: "Hillside exterior of Hotel Woodland Shimla", category: "Exterior" },
+  { src: outsideImage, alt: "Exterior view from outside the hotel", category: "Exterior" },
+  { src: outside1Image, alt: "Alternate exterior hotel view", category: "Exterior" },
+  { src: outside2Image, alt: "Hotel exterior view 2", category: "Exterior" },
+  { src: outside3Image, alt: "Hotel exterior view 3", category: "Exterior" },
   { src: ROOM_SUPER_DELUXE_IMAGE, alt: "Super Deluxe room interior", category: "Rooms" },
   { src: ROOM_STANDARD_IMAGE, alt: "Standard room interior", category: "Rooms" },
   { src: ROOM_FAMILY_SUITE_IMAGE, alt: "Family Suite room interior", category: "Rooms" },
