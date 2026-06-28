@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
+import nightImg from "@/assets/night-img.jpeg";
 import {
   ArrowRight,
   CalendarDays,
@@ -387,7 +388,7 @@ export function HomePage() {
       </section>
 
       <TwoColumnShowcase
-        image={EXTERIOR_DAY_IMAGE}
+        image={nightImg}
         alt="Hotel Woodland Shimla exterior"
         eyebrow="About the hotel"
         title="A woodland stay crafted for quiet comfort and easy city access."

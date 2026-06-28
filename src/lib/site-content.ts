@@ -392,7 +392,7 @@ export const reviews: Review[] = [
     quote:
       "The location is exactly what you hope for in Shimla — close to the buzz, yet the hotel feels warm, calm and genuinely cared for. The team made the stay feel personal.",
     stay: "Stayed in Super Deluxe",
-    image: REVIEW_GUEST_IMAGE,
+    image: room,
   },
   {
     name: "Naina Kapoor",
@@ -401,7 +401,7 @@ export const reviews: Review[] = [
     quote:
       "What stood out most was the feeling of trust. The room was comfortable, the hospitality was prompt, and the atmosphere felt welcoming rather than overly commercial.",
     stay: "Stayed in Standard Room",
-    image: REVIEW_GUEST_IMAGE,
+    image: outside10,
   },
   {
     name: "Rahul Sood",
@@ -410,7 +410,7 @@ export const reviews: Review[] = [
     quote:
       "A lovely choice for a family trip. Easy access to The Ridge, helpful service, and rooms that felt spacious enough for a relaxed two-night stay with children.",
     stay: "Stayed in Family Suite",
-    image: REVIEW_GUEST_IMAGE,
+    image: outside14,
   },
 ];
 
