@@ -399,8 +399,10 @@ export function HomePage() {
       <AttractionsSection preview />
       <ReviewsSection />
       <OffersSection compact />
+      <SisterPropertySection />
       <InstagramGrid onImageOpen={setLightbox} />
       <MapSection />
+
       <Lightbox open={Boolean(lightbox)} image={lightbox} onClose={() => setLightbox(undefined)} />
     </>
   );
