@@ -399,8 +399,10 @@ export function HomePage() {
       <AttractionsSection preview />
       <ReviewsSection />
       <OffersSection compact />
+      <SisterPropertySection />
       <InstagramGrid onImageOpen={setLightbox} />
       <MapSection />
+
       <Lightbox open={Boolean(lightbox)} image={lightbox} onClose={() => setLightbox(undefined)} />
     </>
   );
@@ -969,6 +971,79 @@ export function InstagramGrid({ onImageOpen }: { onImageOpen?: (image: { src: st
     </section>
   );
 }
+
+export function SisterPropertySection() {
+  const images = [
+    { src: "https://www.thewoodlandhotels.com/assets/exterior-day-dhkRYqUU.jpg", alt: "The Woodland Kandaghat exterior" },
+    { src: "https://www.thewoodlandhotels.com/assets/terrace-view-BKRq2NLZ.jpg", alt: "Terrace view at Kandaghat" },
+    { src: "https://www.thewoodlandhotels.com/assets/restaurant-sunset-DeMLL-yt.jpg", alt: "Restaurant at sunset" },
+    { src: "https://www.thewoodlandhotels.com/assets/lounge-view-CffJuhMy.jpg", alt: "Valley lounge view" },
+  ];
+
+  return (
+    <section className="section-shell">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-primary text-primary-foreground">
+        <div className="absolute inset-0 opacity-25">
+          <img
+            src="https://www.thewoodlandhotels.com/assets/exterior-night-C4Jr-vbU.jpg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/70 to-primary/95" />
+
+        <div className="relative grid gap-10 p-8 sm:p-12 lg:grid-cols-[1.05fr_1fr] lg:p-16">
+          <Reveal className="flex flex-col justify-center gap-6">
+            <span className="eyebrow text-primary-foreground/70">Our sister property</span>
+            <h2 className="section-title text-5xl text-primary-foreground sm:text-6xl">
+              The Woodland Kandaghat — a boutique retreat between Shimla &amp; Chail.
+            </h2>
+            <p className="max-w-xl text-base leading-8 text-primary-foreground/80 sm:text-lg">
+              Tucked into Himalayan pines on NH-5, our second home offers layered valley views,
+              fresh Indian cuisine and the same warm Woodland hospitality — just a scenic drive away.
+            </p>
+            <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-[0.22em] text-primary-foreground/70">
+              <span>12+ years</span>
+              <span>10K+ guests</span>
+              <span>4.7★ rated</span>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-4">
+              <Button asChild variant="hero" size="lg">
+                <a href="https://www.thewoodlandhotels.com" target="_blank" rel="noreferrer">
+                  Visit Kandaghat website
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
+              >
+                <a href="tel:+919418021100">Call +91 94180 21100</a>
+              </Button>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              {images.map((image, index) => (
+                <div
+                  key={image.src}
+                  className={`image-mask rounded-[1.4rem] ${index === 0 ? "aspect-[4/5]" : index === 3 ? "aspect-[4/5]" : "aspect-square"}`}
+                >
+                  <img src={image.src} alt={image.alt} className="image-mask-inner" loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 export function MapSection() {
   return (
