@@ -22,6 +22,35 @@ import {
   Wifi,
 } from "lucide-react";
 
+// Food images
+import food from "@/assets/food.jpg";
+import food1 from "@/assets/food1.jpg";
+
+// Outside images
+import outside4 from "@/assets/outside4.jpeg";
+import outside5 from "@/assets/outside5.jpeg";
+import outside6 from "@/assets/outside6.jpeg";
+import outside7 from "@/assets/outside7.jpeg";
+import outside9 from "@/assets/outside9.jpeg";
+import outside10 from "@/assets/outside10.jpeg";
+import outside11 from "@/assets/outside11.jpeg";
+import outside12 from "@/assets/outside12.jpeg";
+import outside13 from "@/assets/outside13.jpeg";
+import outside14 from "@/assets/outside14.jpeg";
+import outside15 from "@/assets/outside15.jpeg";
+
+// Room images
+import room from "@/assets/room.jpg";
+import room2 from "@/assets/room2.jpg";
+import room3 from "@/assets/room3.jpg";
+import room4 from "@/assets/room4.jpg";
+import room5 from "@/assets/room5.jpg";
+import room6 from "@/assets/room6.jpeg";
+import room11 from "@/assets/room11.jpeg";
+import standardroom from "@/assets/standardroom.jpg"
+import superdeluxe from "@/assets/woodland-room-standard.png"
+import familyroom from "@/assets/woodland-room-family-suite.png"
+
 export type Room = {
   slug: string;
   name: string;
@@ -119,6 +148,7 @@ import jakhuImage from "@/assets/Jakhu-Temple.jpg";
 import gaietyImage from "@/assets/Gaiety-Theatre.jpg";
 import lakkarImage from "@/assets/Lakkar-Bazaar.jpg";
 import Garden from "@/assets/garden.jpeg"
+import { fromTheme } from "tailwind-merge";
 
 
 
@@ -180,7 +210,7 @@ export const rooms: Room[] = [
     name: "Standard Room ",
     shortName: "Standard",
     tagline: "A polished comfort stay with cozy textures and boutique warmth.",
-    image: ROOM_SUPER_DELUXE_IMAGE,
+    image: standardroom,
     alt: "Standard room with wood feature wall at Hotel Woodland Shimla",
     size: "Comfort stay ₹2500",
     occupancy: "2 guests",
@@ -204,7 +234,7 @@ export const rooms: Room[] = [
     name: "Super Deluxe",
     shortName: "Super Deluxe",
     tagline: "Refined mountain comfort with warm timber detailing and a soaking tub.",
-    image: ROOM_STANDARD_IMAGE,
+    image: superdeluxe,
     alt: "Super Deluxe room with king bed at Hotel Woodland Shimla",
     size: "Approx. 144 sq ft ₹3500 ",
     occupancy: "2 guests",
@@ -228,7 +258,7 @@ export const rooms: Room[] = [
     name: "Family Suite",
     shortName: "Family Suite",
     tagline: "A practical, spacious layout for shared mountain getaways.",
-    image: ROOM_FAMILY_SUITE_IMAGE,
+    image: room2,
     alt: "Family suite with multiple beds at Hotel Woodland Shimla",
     size: "Family layout ₹4000",
     occupancy: "3–4 guests",
@@ -458,12 +488,29 @@ export const galleryImages = [
   { src: outside1Image, alt: "Alternate exterior hotel view", category: "Exterior" },
   { src: outside2Image, alt: "Hotel exterior view 2", category: "Exterior" },
   { src: outside3Image, alt: "Hotel exterior view 3", category: "Exterior" },
-  { src: ROOM_SUPER_DELUXE_IMAGE, alt: "Super Deluxe room interior", category: "Rooms" },
-  { src: ROOM_STANDARD_IMAGE, alt: "Standard room interior", category: "Rooms" },
-  { src: ROOM_FAMILY_SUITE_IMAGE, alt: "Family Suite room interior", category: "Rooms" },
+  { src: outside4, alt: "Hotel exterior view 4", category: "Exterior" },
+  { src: outside5, alt: "Hotel exterior view 5", category: "Exterior" },
+  { src: outside6, alt: "Hotel exterior view 6", category: "Exterior" },
+  { src: outside7, alt: "Hotel exterior view 7", category: "Exterior" },
+  { src: outside9, alt: "Hotel exterior view 9", category: "Exterior" },
+  { src: outside10, alt: "Hotel exterior view 10", category: "Exterior" },
+  { src: outside11, alt: "Hotel exterior view 11", category: "Exterior" },
+  { src: outside12, alt: "Hotel exterior view 12", category: "Exterior" },
+  { src: outside13, alt: "Hotel exterior view 13", category: "Exterior" },
+  { src: outside14, alt: "Hotel exterior view 14", category: "Exterior" },
+  { src: outside15, alt: "Hotel exterior view 15", category: "Exterior" },
+  { src: room, alt: "Room interior view 1", category: "Rooms" },
+  { src: room2, alt: "Room interior view 2", category: "Rooms" },
+  { src: room3, alt: "Room interior view 3", category: "Rooms" },
+  { src: room4, alt: "Room interior view 4", category: "Rooms" },
+  { src: room5, alt: "Room interior view 5", category: "Rooms" },
+  { src: room6, alt: "Room interior view 6", category: "Rooms" },
+  { src: room11, alt: "Room interior view 7", category: "Rooms" },
   { src: LOUNGE_IMAGE, alt: "Guest lounge seating area", category: "Facilities" },
-  { src: DINING_RESTAURANT_IMAGE, alt: "Placeholder image for restaurant interior replacement", category: "Dining" },
-  { src: Garden, alt: "Placeholder image for valley view replacement", category: "Views" },
+  { src: food, alt: "Dining food presentation 1", category: "Dining" },
+  { src: food1, alt: "Dining food presentation 2", category: "Dining" },
+  { src: DINING_RESTAURANT_IMAGE, alt: "Restaurant interior", category: "Dining" },
+  { src: Garden, alt: "Garden and terrace view", category: "Views" },
 ];
 
 export const stats = [
