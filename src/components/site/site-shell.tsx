@@ -25,6 +25,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
   ADDRESS_LINES,
+  BREAKFAST_IMAGE,
+  CHEF_STORY_IMAGE,
+  DINING_RESTAURANT_IMAGE,
   EMAIL_PLACEHOLDER,
   EXTERIOR_DAY_IMAGE,
   HERO_EXTERIOR_IMAGE,
