@@ -14,12 +14,12 @@ import {
   Phone,
   Sparkles,
   Star,
-  Trees,
   Users,
   X,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import woodlandLogo from "@/assets/woodland-logo.png";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -107,9 +107,11 @@ function SiteHeader() {
       <div className={cn("container-shell rounded-full transition-all duration-500", navClass)}>
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3 px-2 py-2 sm:px-3">
           <Link to="/" className="flex min-w-0 items-center gap-3 rounded-full px-3 py-2">
-            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border bg-panel text-foreground">
-              <Trees className="h-5 w-5 text-luxury" />
-            </div>
+            <img
+              src={woodlandLogo}
+              alt="Hotel Woodland Shimla logo"
+              className="h-11 w-11 shrink-0 rounded-full object-contain"
+            />
             <div className="min-w-0">
               <div className="truncate font-sans text-[0.68rem] uppercase tracking-[0.24em] text-muted-foreground">
                 The Woodland 
