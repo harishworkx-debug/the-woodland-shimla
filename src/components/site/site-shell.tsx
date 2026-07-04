@@ -249,9 +249,9 @@ function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-shell flex flex-col gap-4 py-5 text-sm text-primary-foreground/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-shell flex flex-col items-center gap-4 py-5 text-center text-sm text-primary-foreground/60">
           <div>© 2026 {SITE_NAME}. Crafted for direct bookings and premium hospitality storytelling.</div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <a href={MAPS_URL} target="_blank" rel="noreferrer" className="story-link">
               Google Maps
             </a>
@@ -260,6 +260,12 @@ function SiteFooter() {
             </a>
             <a href={`https://wa.me/${WHATSAPP_TEL.replace("+", "")}`} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10">
               <FaWhatsapp />
+            </a>
+          </div>
+          <div>
+            Powered by{' '}
+            <a href="https://www.techhim.online/" target="_blank" rel="noreferrer" className="font-medium text-primary-foreground/90 transition hover:text-primary-foreground">
+              TechHim Solutions
             </a>
           </div>
         </div>
