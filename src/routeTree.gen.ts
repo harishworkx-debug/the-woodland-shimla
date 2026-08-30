@@ -16,16 +16,25 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PackagesOffersRouteImport } from './routes/packages-offers'
 import { Route as NearbyAttractionsRouteImport } from './routes/nearby-attractions'
 import { Route as LocationRouteImport } from './routes/location'
+import { Route as HotelInBudgetShimlaRouteImport } from './routes/hotel-in-budget-shimla'
+import { Route as HotelAtMallRoadRouteImport } from './routes/hotel-at-mall-road'
+import { Route as HotelAtKufriRouteImport } from './routes/hotel-at-kufri'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FamilyHotelInShimlaRouteImport } from './routes/family-hotel-in-shimla'
+import { Route as FamilyHotelRouteImport } from './routes/family-hotel'
 import { Route as FacilitiesRouteImport } from './routes/facilities'
 import { Route as DiningRouteImport } from './routes/dining'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BudgetHotelRouteImport } from './routes/budget-hotel'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BestHotelAtKufriRouteImport } from './routes/best-hotel-at-kufri'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RoomsSlugRouteImport } from './routes/rooms.$slug'
+import { Route as LocationsMallRoadRouteImport } from './routes/locations.mall-road'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AttractionsKufriRouteImport } from './routes/attractions.kufri'
 
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   id: '/terms-and-conditions',
@@ -62,6 +71,21 @@ const LocationRoute = LocationRouteImport.update({
   path: '/location',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HotelInBudgetShimlaRoute = HotelInBudgetShimlaRouteImport.update({
+  id: '/hotel-in-budget-shimla',
+  path: '/hotel-in-budget-shimla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelAtMallRoadRoute = HotelAtMallRoadRouteImport.update({
+  id: '/hotel-at-mall-road',
+  path: '/hotel-at-mall-road',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelAtKufriRoute = HotelAtKufriRouteImport.update({
+  id: '/hotel-at-kufri',
+  path: '/hotel-at-kufri',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
@@ -70,6 +94,16 @@ const GalleryRoute = GalleryRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamilyHotelInShimlaRoute = FamilyHotelInShimlaRouteImport.update({
+  id: '/family-hotel-in-shimla',
+  path: '/family-hotel-in-shimla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamilyHotelRoute = FamilyHotelRouteImport.update({
+  id: '/family-hotel',
+  path: '/family-hotel',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FacilitiesRoute = FacilitiesRouteImport.update({
@@ -87,9 +121,19 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BudgetHotelRoute = BudgetHotelRouteImport.update({
+  id: '/budget-hotel',
+  path: '/budget-hotel',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BestHotelAtKufriRoute = BestHotelAtKufriRouteImport.update({
+  id: '/best-hotel-at-kufri',
+  path: '/best-hotel-at-kufri',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -107,21 +151,38 @@ const RoomsSlugRoute = RoomsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => RoomsRoute,
 } as any)
+const LocationsMallRoadRoute = LocationsMallRoadRouteImport.update({
+  id: '/locations/mall-road',
+  path: '/locations/mall-road',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const AttractionsKufriRoute = AttractionsKufriRouteImport.update({
+  id: '/attractions/kufri',
+  path: '/attractions/kufri',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/best-hotel-at-kufri': typeof BestHotelAtKufriRoute
   '/blog': typeof BlogRouteWithChildren
+  '/budget-hotel': typeof BudgetHotelRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/facilities': typeof FacilitiesRoute
+  '/family-hotel': typeof FamilyHotelRoute
+  '/family-hotel-in-shimla': typeof FamilyHotelInShimlaRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
+  '/hotel-at-kufri': typeof HotelAtKufriRoute
+  '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
+  '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
@@ -129,18 +190,27 @@ export interface FileRoutesByFullPath {
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/locations/mall-road': typeof LocationsMallRoadRoute
   '/rooms/$slug': typeof RoomsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/best-hotel-at-kufri': typeof BestHotelAtKufriRoute
   '/blog': typeof BlogRouteWithChildren
+  '/budget-hotel': typeof BudgetHotelRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/facilities': typeof FacilitiesRoute
+  '/family-hotel': typeof FamilyHotelRoute
+  '/family-hotel-in-shimla': typeof FamilyHotelInShimlaRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
+  '/hotel-at-kufri': typeof HotelAtKufriRoute
+  '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
+  '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
@@ -148,19 +218,28 @@ export interface FileRoutesByTo {
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/locations/mall-road': typeof LocationsMallRoadRoute
   '/rooms/$slug': typeof RoomsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/best-hotel-at-kufri': typeof BestHotelAtKufriRoute
   '/blog': typeof BlogRouteWithChildren
+  '/budget-hotel': typeof BudgetHotelRoute
   '/contact': typeof ContactRoute
   '/dining': typeof DiningRoute
   '/facilities': typeof FacilitiesRoute
+  '/family-hotel': typeof FamilyHotelRoute
+  '/family-hotel-in-shimla': typeof FamilyHotelInShimlaRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
+  '/hotel-at-kufri': typeof HotelAtKufriRoute
+  '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
+  '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
@@ -168,7 +247,9 @@ export interface FileRoutesById {
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/locations/mall-road': typeof LocationsMallRoadRoute
   '/rooms/$slug': typeof RoomsSlugRoute
 }
 export interface FileRouteTypes {
@@ -176,12 +257,19 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/best-hotel-at-kufri'
     | '/blog'
+    | '/budget-hotel'
     | '/contact'
     | '/dining'
     | '/facilities'
+    | '/family-hotel'
+    | '/family-hotel-in-shimla'
     | '/faq'
     | '/gallery'
+    | '/hotel-at-kufri'
+    | '/hotel-at-mall-road'
+    | '/hotel-in-budget-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
@@ -189,18 +277,27 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/rooms'
     | '/terms-and-conditions'
+    | '/attractions/kufri'
     | '/blog/$slug'
+    | '/locations/mall-road'
     | '/rooms/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/best-hotel-at-kufri'
     | '/blog'
+    | '/budget-hotel'
     | '/contact'
     | '/dining'
     | '/facilities'
+    | '/family-hotel'
+    | '/family-hotel-in-shimla'
     | '/faq'
     | '/gallery'
+    | '/hotel-at-kufri'
+    | '/hotel-at-mall-road'
+    | '/hotel-in-budget-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
@@ -208,18 +305,27 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/rooms'
     | '/terms-and-conditions'
+    | '/attractions/kufri'
     | '/blog/$slug'
+    | '/locations/mall-road'
     | '/rooms/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/best-hotel-at-kufri'
     | '/blog'
+    | '/budget-hotel'
     | '/contact'
     | '/dining'
     | '/facilities'
+    | '/family-hotel'
+    | '/family-hotel-in-shimla'
     | '/faq'
     | '/gallery'
+    | '/hotel-at-kufri'
+    | '/hotel-at-mall-road'
+    | '/hotel-in-budget-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
@@ -227,19 +333,28 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/rooms'
     | '/terms-and-conditions'
+    | '/attractions/kufri'
     | '/blog/$slug'
+    | '/locations/mall-road'
     | '/rooms/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BestHotelAtKufriRoute: typeof BestHotelAtKufriRoute
   BlogRoute: typeof BlogRouteWithChildren
+  BudgetHotelRoute: typeof BudgetHotelRoute
   ContactRoute: typeof ContactRoute
   DiningRoute: typeof DiningRoute
   FacilitiesRoute: typeof FacilitiesRoute
+  FamilyHotelRoute: typeof FamilyHotelRoute
+  FamilyHotelInShimlaRoute: typeof FamilyHotelInShimlaRoute
   FaqRoute: typeof FaqRoute
   GalleryRoute: typeof GalleryRoute
+  HotelAtKufriRoute: typeof HotelAtKufriRoute
+  HotelAtMallRoadRoute: typeof HotelAtMallRoadRoute
+  HotelInBudgetShimlaRoute: typeof HotelInBudgetShimlaRoute
   LocationRoute: typeof LocationRoute
   NearbyAttractionsRoute: typeof NearbyAttractionsRoute
   PackagesOffersRoute: typeof PackagesOffersRoute
@@ -247,6 +362,8 @@ export interface RootRouteChildren {
   ReviewsRoute: typeof ReviewsRoute
   RoomsRoute: typeof RoomsRouteWithChildren
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  AttractionsKufriRoute: typeof AttractionsKufriRoute
+  LocationsMallRoadRoute: typeof LocationsMallRoadRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -300,6 +417,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hotel-in-budget-shimla': {
+      id: '/hotel-in-budget-shimla'
+      path: '/hotel-in-budget-shimla'
+      fullPath: '/hotel-in-budget-shimla'
+      preLoaderRoute: typeof HotelInBudgetShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-at-mall-road': {
+      id: '/hotel-at-mall-road'
+      path: '/hotel-at-mall-road'
+      fullPath: '/hotel-at-mall-road'
+      preLoaderRoute: typeof HotelAtMallRoadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-at-kufri': {
+      id: '/hotel-at-kufri'
+      path: '/hotel-at-kufri'
+      fullPath: '/hotel-at-kufri'
+      preLoaderRoute: typeof HotelAtKufriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
@@ -312,6 +450,20 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/family-hotel-in-shimla': {
+      id: '/family-hotel-in-shimla'
+      path: '/family-hotel-in-shimla'
+      fullPath: '/family-hotel-in-shimla'
+      preLoaderRoute: typeof FamilyHotelInShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/family-hotel': {
+      id: '/family-hotel'
+      path: '/family-hotel'
+      fullPath: '/family-hotel'
+      preLoaderRoute: typeof FamilyHotelRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/facilities': {
@@ -335,11 +487,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/budget-hotel': {
+      id: '/budget-hotel'
+      path: '/budget-hotel'
+      fullPath: '/budget-hotel'
+      preLoaderRoute: typeof BudgetHotelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog': {
       id: '/blog'
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/best-hotel-at-kufri': {
+      id: '/best-hotel-at-kufri'
+      path: '/best-hotel-at-kufri'
+      fullPath: '/best-hotel-at-kufri'
+      preLoaderRoute: typeof BestHotelAtKufriRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -363,12 +529,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RoomsSlugRouteImport
       parentRoute: typeof RoomsRoute
     }
+    '/locations/mall-road': {
+      id: '/locations/mall-road'
+      path: '/locations/mall-road'
+      fullPath: '/locations/mall-road'
+      preLoaderRoute: typeof LocationsMallRoadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/attractions/kufri': {
+      id: '/attractions/kufri'
+      path: '/attractions/kufri'
+      fullPath: '/attractions/kufri'
+      preLoaderRoute: typeof AttractionsKufriRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -396,12 +576,19 @@ const RoomsRouteWithChildren = RoomsRoute._addFileChildren(RoomsRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BestHotelAtKufriRoute: BestHotelAtKufriRoute,
   BlogRoute: BlogRouteWithChildren,
+  BudgetHotelRoute: BudgetHotelRoute,
   ContactRoute: ContactRoute,
   DiningRoute: DiningRoute,
   FacilitiesRoute: FacilitiesRoute,
+  FamilyHotelRoute: FamilyHotelRoute,
+  FamilyHotelInShimlaRoute: FamilyHotelInShimlaRoute,
   FaqRoute: FaqRoute,
   GalleryRoute: GalleryRoute,
+  HotelAtKufriRoute: HotelAtKufriRoute,
+  HotelAtMallRoadRoute: HotelAtMallRoadRoute,
+  HotelInBudgetShimlaRoute: HotelInBudgetShimlaRoute,
   LocationRoute: LocationRoute,
   NearbyAttractionsRoute: NearbyAttractionsRoute,
   PackagesOffersRoute: PackagesOffersRoute,
@@ -409,6 +596,8 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewsRoute: ReviewsRoute,
   RoomsRoute: RoomsRouteWithChildren,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
+  AttractionsKufriRoute: AttractionsKufriRoute,
+  LocationsMallRoadRoute: LocationsMallRoadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

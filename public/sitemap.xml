@@ -96,6 +96,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shimla.thewoodlandhotels.com/hotel-at-mall-road</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://shimla.thewoodlandhotels.com/hotel-at-kufri</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shimla.thewoodlandhotels.com/best-hotel-at-kufri</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shimla.thewoodlandhotels.com/hotel-in-budget-shimla</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shimla.thewoodlandhotels.com/family-hotel-in-shimla</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://shimla.thewoodlandhotels.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

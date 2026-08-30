@@ -5,9 +5,9 @@ import { buildPageHead, jsonLdScript, websiteSchema } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     buildPageHead({
-      title: "Hotel Woodland Shimla — Luxury Boutique Stay Near The Ridge",
+      title: "Hotel Woodland Shimla — Comfortable Rooms on The Ridge Near Mall Road",
       description:
-        "A boutique luxury hotel in Shimla near The Ridge & Mall Road. Elegant rooms, warm mountain hospitality, in-house dining and direct booking.",
+        "Hotel Woodland offers comfortable, affordable rooms in Shimla on The Ridge. Family-friendly hotel near Mall Road, Lakkar Bazaar & Jakhu Temple. Mountain views, restaurant, WiFi. ₹2,500–₹4,000/night. Book now.",
       path: "/",
       scripts: [jsonLdScript(websiteSchema())],
     }),

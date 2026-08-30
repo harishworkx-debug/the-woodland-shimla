@@ -6,8 +6,8 @@ import { buildPageHead, hotelContactSchema, jsonLdScript, defaultBreadcrumb } fr
 export const Route = createFileRoute("/contact")({
   head: () =>
     buildPageHead({
-      title: "Contact — Hotel Woodland Shimla",
-      description: "Reach Hotel Woodland Shimla for direct booking, stay enquiries and arrival planning by phone, WhatsApp or email.",
+      title: "Contact Hotel Woodland Shimla — Direct Booking Phone & Email",
+      description: "Contact Hotel Woodland on The Ridge, Shimla. Phone: +91 177 2811002 | Email: reservations@hotelwoodlandshimla.com | WhatsApp booking available.",
       path: "/contact",
       image: LOUNGE_IMAGE,
       scripts: [jsonLdScript(hotelContactSchema()), jsonLdScript(defaultBreadcrumb("Contact", "/contact"))],

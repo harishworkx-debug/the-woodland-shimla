@@ -43,11 +43,12 @@ export function buildPageHead({
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["WebSite", "Hotel"],
+    "@type": ["WebSite", "Hotel", "LocalBusiness"],
     name: SITE_NAME,
+    alternateName: "Hotel Woodland",
     description:
-      "Luxury boutique hotel in Shimla near The Ridge with elegant rooms, warm hospitality, in-house dining and easy access to local attractions.",
-    url: "/",
+      "Hotel Woodland in Shimla — comfortable, affordable rooms on The Ridge near Mall Road. Family-friendly hotel with mountain views, restaurant, and WiFi. Perfect for families, couples, and weekend getaways.",
+    url: "https://shimla.thewoodlandhotels.com",
     telephone: PHONE_DISPLAY,
     email: EMAIL_PLACEHOLDER,
     address: {
@@ -58,6 +59,11 @@ export function websiteSchema() {
       postalCode: "171001",
       addressCountry: "IN",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "31.102489",
+      longitude: "77.179176",
+    },
     sameAs: [MAPS_URL],
     amenityFeature: [
       "Restaurant",
@@ -65,7 +71,17 @@ export function websiteSchema() {
       "Garden",
       "Terrace",
       "Room Service",
+      "Mountain View",
+      "Parking",
     ].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
+    priceRange: "₹2,500–₹4,000",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: "120",
+      bestRating: "5",
+      worstRating: "1",
+    },
   };
 }
 
@@ -209,5 +225,31 @@ export function hotelContactSchema() {
         contactType: "customer service",
       },
     ],
+  };
+}
+
+export function locationPageSchema(locationName: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    name: SITE_NAME,
+    description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ADDRESS_LINES[0],
+      addressLocality: ADDRESS_LINES[2],
+      addressRegion: "Himachal Pradesh",
+      postalCode: "171001",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "31.102489",
+      longitude: "77.179176",
+    },
+    areaServed: locationName,
+    telephone: PHONE_DISPLAY,
+    email: EMAIL_PLACEHOLDER,
+    url: MAPS_URL,
   };
 }

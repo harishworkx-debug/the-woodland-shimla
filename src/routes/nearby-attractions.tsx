@@ -6,8 +6,8 @@ import { buildPageHead, defaultBreadcrumb, jsonLdScript } from "@/lib/seo";
 export const Route = createFileRoute("/nearby-attractions")({
   head: () =>
     buildPageHead({
-      title: "Nearby Attractions — Hotel Woodland Shimla",
-      description: "The Ridge, Mall Road, Jakhu Temple, Gaiety Theatre and Lakkar Bazaar — all within easy reach of Hotel Woodland Shimla.",
+      title: "Attractions near Hotel Woodland — Mall Road, Lakkar Bazaar, Jakhu Temple, Kufri",
+      description: "Hotel Woodland near attractions: The Ridge, Mall Road, Lakkar Bazaar, Jakhu Temple, Gaiety Theatre, Kufri, Naldehra. Walk or short drive from hotel.",
       path: "/nearby-attractions",
       image: ATTRACTIONS_HEADER_IMAGE,
       scripts: [jsonLdScript(defaultBreadcrumb("Nearby Attractions", "/nearby-attractions"))],
