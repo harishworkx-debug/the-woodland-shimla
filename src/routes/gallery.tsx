@@ -8,8 +8,8 @@ import { buildPageHead, defaultBreadcrumb, jsonLdScript } from "@/lib/seo";
 export const Route = createFileRoute("/gallery")({
   head: () =>
     buildPageHead({
-      title: "Gallery — Hotel Woodland Shimla",
-      description: "A visual journey through Hotel Woodland Shimla — rooms, dining, terraces and the hillside setting near The Ridge.",
+      title: "The Woodland Shimla Photos | Hotel Rooms, Interiors & Views",
+      description: "Browse The Woodland Shimla photo gallery for hotel rooms, mountain views, dining spaces and the welcoming hillside setting in Shimla.",
       path: "/gallery",
       image: HERO_EXTERIOR_IMAGE,
       scripts: [jsonLdScript(defaultBreadcrumb("Gallery", "/gallery"))],

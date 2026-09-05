@@ -445,28 +445,27 @@ function HomeHero() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
           <div className="max-w-4xl text-white">
             <Reveal>
-              <div className="eyebrow text-white/74">Luxury boutique hospitality in Shimla</div>
+              <div className="eyebrow text-white/74">The Woodland Shimla</div>
             </Reveal>
             <Reveal delay={0.05}>
               <h1 className="display-title mt-5 text-[4.1rem] sm:text-[5.8rem] lg:text-[8rem]">
-                Hotel Woodland Shimla
+                Best Hotel in Shimla
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
-                Elegant rooms, warm mountain hospitality, trusted location near The Ridge and a
-                slower boutique rhythm designed to turn first-time stays into repeat escapes.
+                Experience a comfortable mountain stay near The Ridge with scenic surroundings, thoughtful amenities and easy access to Shimla&apos;s most-loved attractions.
               </p>
             </Reveal>
             <Reveal delay={0.14}>
               <div className="mt-8 flex flex-wrap gap-4">
                 <MagneticButton>
                   <Button asChild variant="hero" size="lg">
-                    <Link to="/rooms">Explore Rooms</Link>
+                    <Link to="/contact">Book Your Stay</Link>
                   </Button>
                 </MagneticButton>
                 <Button asChild variant="outline" size="lg" className="border-white/25 bg-white/10 text-white hover:bg-white/18 hover:text-white">
-                  <Link to="/contact">Book Direct</Link>
+                  <Link to="/rooms">Explore Rooms</Link>
                 </Button>
               </div>
             </Reveal>

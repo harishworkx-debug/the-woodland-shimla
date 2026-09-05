@@ -10,12 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as ShimlaTravelGuideRouteImport } from './routes/shimla-travel-guide'
 import { Route as RoomsRouteImport } from './routes/rooms'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as RestaurantRouteImport } from './routes/restaurant'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PackagesOffersRouteImport } from './routes/packages-offers'
 import { Route as NearbyAttractionsRouteImport } from './routes/nearby-attractions'
 import { Route as LocationRouteImport } from './routes/location'
+import { Route as HotelNearTheRidgeShimlaRouteImport } from './routes/hotel-near-the-ridge-shimla'
+import { Route as HotelNearShimlaRailwayStationRouteImport } from './routes/hotel-near-shimla-railway-station'
+import { Route as HotelNearShimlaRouteImport } from './routes/hotel-near-shimla'
+import { Route as HotelNearScandalPointShimlaRouteImport } from './routes/hotel-near-scandal-point-shimla'
+import { Route as HotelNearLakkarBazaarShimlaRouteImport } from './routes/hotel-near-lakkar-bazaar-shimla'
+import { Route as HotelNearKufriRouteImport } from './routes/hotel-near-kufri'
+import { Route as HotelNearJakhuTempleShimlaRouteImport } from './routes/hotel-near-jakhu-temple-shimla'
+import { Route as HotelNearChristChurchShimlaRouteImport } from './routes/hotel-near-christ-church-shimla'
+import { Route as HotelInMallRoadRouteImport } from './routes/hotel-in-mall-road'
 import { Route as HotelInBudgetShimlaRouteImport } from './routes/hotel-in-budget-shimla'
 import { Route as HotelAtMallRoadRouteImport } from './routes/hotel-at-mall-road'
 import { Route as HotelAtKufriRouteImport } from './routes/hotel-at-kufri'
@@ -41,6 +52,11 @@ const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   path: '/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShimlaTravelGuideRoute = ShimlaTravelGuideRouteImport.update({
+  id: '/shimla-travel-guide',
+  path: '/shimla-travel-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RoomsRoute = RoomsRouteImport.update({
   id: '/rooms',
   path: '/rooms',
@@ -49,6 +65,11 @@ const RoomsRoute = RoomsRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurantRoute = RestaurantRouteImport.update({
+  id: '/restaurant',
+  path: '/restaurant',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -69,6 +90,56 @@ const NearbyAttractionsRoute = NearbyAttractionsRouteImport.update({
 const LocationRoute = LocationRouteImport.update({
   id: '/location',
   path: '/location',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelNearTheRidgeShimlaRoute = HotelNearTheRidgeShimlaRouteImport.update({
+  id: '/hotel-near-the-ridge-shimla',
+  path: '/hotel-near-the-ridge-shimla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelNearShimlaRailwayStationRoute =
+  HotelNearShimlaRailwayStationRouteImport.update({
+    id: '/hotel-near-shimla-railway-station',
+    path: '/hotel-near-shimla-railway-station',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HotelNearShimlaRoute = HotelNearShimlaRouteImport.update({
+  id: '/hotel-near-shimla',
+  path: '/hotel-near-shimla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelNearScandalPointShimlaRoute =
+  HotelNearScandalPointShimlaRouteImport.update({
+    id: '/hotel-near-scandal-point-shimla',
+    path: '/hotel-near-scandal-point-shimla',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HotelNearLakkarBazaarShimlaRoute =
+  HotelNearLakkarBazaarShimlaRouteImport.update({
+    id: '/hotel-near-lakkar-bazaar-shimla',
+    path: '/hotel-near-lakkar-bazaar-shimla',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HotelNearKufriRoute = HotelNearKufriRouteImport.update({
+  id: '/hotel-near-kufri',
+  path: '/hotel-near-kufri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelNearJakhuTempleShimlaRoute =
+  HotelNearJakhuTempleShimlaRouteImport.update({
+    id: '/hotel-near-jakhu-temple-shimla',
+    path: '/hotel-near-jakhu-temple-shimla',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HotelNearChristChurchShimlaRoute =
+  HotelNearChristChurchShimlaRouteImport.update({
+    id: '/hotel-near-christ-church-shimla',
+    path: '/hotel-near-christ-church-shimla',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HotelInMallRoadRoute = HotelInMallRoadRouteImport.update({
+  id: '/hotel-in-mall-road',
+  path: '/hotel-in-mall-road',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HotelInBudgetShimlaRoute = HotelInBudgetShimlaRouteImport.update({
@@ -183,12 +254,23 @@ export interface FileRoutesByFullPath {
   '/hotel-at-kufri': typeof HotelAtKufriRoute
   '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
   '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
+  '/hotel-in-mall-road': typeof HotelInMallRoadRoute
+  '/hotel-near-christ-church-shimla': typeof HotelNearChristChurchShimlaRoute
+  '/hotel-near-jakhu-temple-shimla': typeof HotelNearJakhuTempleShimlaRoute
+  '/hotel-near-kufri': typeof HotelNearKufriRoute
+  '/hotel-near-lakkar-bazaar-shimla': typeof HotelNearLakkarBazaarShimlaRoute
+  '/hotel-near-scandal-point-shimla': typeof HotelNearScandalPointShimlaRoute
+  '/hotel-near-shimla': typeof HotelNearShimlaRoute
+  '/hotel-near-shimla-railway-station': typeof HotelNearShimlaRailwayStationRoute
+  '/hotel-near-the-ridge-shimla': typeof HotelNearTheRidgeShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/restaurant': typeof RestaurantRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
+  '/shimla-travel-guide': typeof ShimlaTravelGuideRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -211,12 +293,23 @@ export interface FileRoutesByTo {
   '/hotel-at-kufri': typeof HotelAtKufriRoute
   '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
   '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
+  '/hotel-in-mall-road': typeof HotelInMallRoadRoute
+  '/hotel-near-christ-church-shimla': typeof HotelNearChristChurchShimlaRoute
+  '/hotel-near-jakhu-temple-shimla': typeof HotelNearJakhuTempleShimlaRoute
+  '/hotel-near-kufri': typeof HotelNearKufriRoute
+  '/hotel-near-lakkar-bazaar-shimla': typeof HotelNearLakkarBazaarShimlaRoute
+  '/hotel-near-scandal-point-shimla': typeof HotelNearScandalPointShimlaRoute
+  '/hotel-near-shimla': typeof HotelNearShimlaRoute
+  '/hotel-near-shimla-railway-station': typeof HotelNearShimlaRailwayStationRoute
+  '/hotel-near-the-ridge-shimla': typeof HotelNearTheRidgeShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/restaurant': typeof RestaurantRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
+  '/shimla-travel-guide': typeof ShimlaTravelGuideRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -240,12 +333,23 @@ export interface FileRoutesById {
   '/hotel-at-kufri': typeof HotelAtKufriRoute
   '/hotel-at-mall-road': typeof HotelAtMallRoadRoute
   '/hotel-in-budget-shimla': typeof HotelInBudgetShimlaRoute
+  '/hotel-in-mall-road': typeof HotelInMallRoadRoute
+  '/hotel-near-christ-church-shimla': typeof HotelNearChristChurchShimlaRoute
+  '/hotel-near-jakhu-temple-shimla': typeof HotelNearJakhuTempleShimlaRoute
+  '/hotel-near-kufri': typeof HotelNearKufriRoute
+  '/hotel-near-lakkar-bazaar-shimla': typeof HotelNearLakkarBazaarShimlaRoute
+  '/hotel-near-scandal-point-shimla': typeof HotelNearScandalPointShimlaRoute
+  '/hotel-near-shimla': typeof HotelNearShimlaRoute
+  '/hotel-near-shimla-railway-station': typeof HotelNearShimlaRailwayStationRoute
+  '/hotel-near-the-ridge-shimla': typeof HotelNearTheRidgeShimlaRoute
   '/location': typeof LocationRoute
   '/nearby-attractions': typeof NearbyAttractionsRoute
   '/packages-offers': typeof PackagesOffersRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/restaurant': typeof RestaurantRoute
   '/reviews': typeof ReviewsRoute
   '/rooms': typeof RoomsRouteWithChildren
+  '/shimla-travel-guide': typeof ShimlaTravelGuideRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/attractions/kufri': typeof AttractionsKufriRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -270,12 +374,23 @@ export interface FileRouteTypes {
     | '/hotel-at-kufri'
     | '/hotel-at-mall-road'
     | '/hotel-in-budget-shimla'
+    | '/hotel-in-mall-road'
+    | '/hotel-near-christ-church-shimla'
+    | '/hotel-near-jakhu-temple-shimla'
+    | '/hotel-near-kufri'
+    | '/hotel-near-lakkar-bazaar-shimla'
+    | '/hotel-near-scandal-point-shimla'
+    | '/hotel-near-shimla'
+    | '/hotel-near-shimla-railway-station'
+    | '/hotel-near-the-ridge-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
     | '/privacy-policy'
+    | '/restaurant'
     | '/reviews'
     | '/rooms'
+    | '/shimla-travel-guide'
     | '/terms-and-conditions'
     | '/attractions/kufri'
     | '/blog/$slug'
@@ -298,12 +413,23 @@ export interface FileRouteTypes {
     | '/hotel-at-kufri'
     | '/hotel-at-mall-road'
     | '/hotel-in-budget-shimla'
+    | '/hotel-in-mall-road'
+    | '/hotel-near-christ-church-shimla'
+    | '/hotel-near-jakhu-temple-shimla'
+    | '/hotel-near-kufri'
+    | '/hotel-near-lakkar-bazaar-shimla'
+    | '/hotel-near-scandal-point-shimla'
+    | '/hotel-near-shimla'
+    | '/hotel-near-shimla-railway-station'
+    | '/hotel-near-the-ridge-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
     | '/privacy-policy'
+    | '/restaurant'
     | '/reviews'
     | '/rooms'
+    | '/shimla-travel-guide'
     | '/terms-and-conditions'
     | '/attractions/kufri'
     | '/blog/$slug'
@@ -326,12 +452,23 @@ export interface FileRouteTypes {
     | '/hotel-at-kufri'
     | '/hotel-at-mall-road'
     | '/hotel-in-budget-shimla'
+    | '/hotel-in-mall-road'
+    | '/hotel-near-christ-church-shimla'
+    | '/hotel-near-jakhu-temple-shimla'
+    | '/hotel-near-kufri'
+    | '/hotel-near-lakkar-bazaar-shimla'
+    | '/hotel-near-scandal-point-shimla'
+    | '/hotel-near-shimla'
+    | '/hotel-near-shimla-railway-station'
+    | '/hotel-near-the-ridge-shimla'
     | '/location'
     | '/nearby-attractions'
     | '/packages-offers'
     | '/privacy-policy'
+    | '/restaurant'
     | '/reviews'
     | '/rooms'
+    | '/shimla-travel-guide'
     | '/terms-and-conditions'
     | '/attractions/kufri'
     | '/blog/$slug'
@@ -355,12 +492,23 @@ export interface RootRouteChildren {
   HotelAtKufriRoute: typeof HotelAtKufriRoute
   HotelAtMallRoadRoute: typeof HotelAtMallRoadRoute
   HotelInBudgetShimlaRoute: typeof HotelInBudgetShimlaRoute
+  HotelInMallRoadRoute: typeof HotelInMallRoadRoute
+  HotelNearChristChurchShimlaRoute: typeof HotelNearChristChurchShimlaRoute
+  HotelNearJakhuTempleShimlaRoute: typeof HotelNearJakhuTempleShimlaRoute
+  HotelNearKufriRoute: typeof HotelNearKufriRoute
+  HotelNearLakkarBazaarShimlaRoute: typeof HotelNearLakkarBazaarShimlaRoute
+  HotelNearScandalPointShimlaRoute: typeof HotelNearScandalPointShimlaRoute
+  HotelNearShimlaRoute: typeof HotelNearShimlaRoute
+  HotelNearShimlaRailwayStationRoute: typeof HotelNearShimlaRailwayStationRoute
+  HotelNearTheRidgeShimlaRoute: typeof HotelNearTheRidgeShimlaRoute
   LocationRoute: typeof LocationRoute
   NearbyAttractionsRoute: typeof NearbyAttractionsRoute
   PackagesOffersRoute: typeof PackagesOffersRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RestaurantRoute: typeof RestaurantRoute
   ReviewsRoute: typeof ReviewsRoute
   RoomsRoute: typeof RoomsRouteWithChildren
+  ShimlaTravelGuideRoute: typeof ShimlaTravelGuideRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   AttractionsKufriRoute: typeof AttractionsKufriRoute
   LocationsMallRoadRoute: typeof LocationsMallRoadRoute
@@ -375,6 +523,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shimla-travel-guide': {
+      id: '/shimla-travel-guide'
+      path: '/shimla-travel-guide'
+      fullPath: '/shimla-travel-guide'
+      preLoaderRoute: typeof ShimlaTravelGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/rooms': {
       id: '/rooms'
       path: '/rooms'
@@ -387,6 +542,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurant': {
+      id: '/restaurant'
+      path: '/restaurant'
+      fullPath: '/restaurant'
+      preLoaderRoute: typeof RestaurantRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -415,6 +577,69 @@ declare module '@tanstack/react-router' {
       path: '/location'
       fullPath: '/location'
       preLoaderRoute: typeof LocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-the-ridge-shimla': {
+      id: '/hotel-near-the-ridge-shimla'
+      path: '/hotel-near-the-ridge-shimla'
+      fullPath: '/hotel-near-the-ridge-shimla'
+      preLoaderRoute: typeof HotelNearTheRidgeShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-shimla-railway-station': {
+      id: '/hotel-near-shimla-railway-station'
+      path: '/hotel-near-shimla-railway-station'
+      fullPath: '/hotel-near-shimla-railway-station'
+      preLoaderRoute: typeof HotelNearShimlaRailwayStationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-shimla': {
+      id: '/hotel-near-shimla'
+      path: '/hotel-near-shimla'
+      fullPath: '/hotel-near-shimla'
+      preLoaderRoute: typeof HotelNearShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-scandal-point-shimla': {
+      id: '/hotel-near-scandal-point-shimla'
+      path: '/hotel-near-scandal-point-shimla'
+      fullPath: '/hotel-near-scandal-point-shimla'
+      preLoaderRoute: typeof HotelNearScandalPointShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-lakkar-bazaar-shimla': {
+      id: '/hotel-near-lakkar-bazaar-shimla'
+      path: '/hotel-near-lakkar-bazaar-shimla'
+      fullPath: '/hotel-near-lakkar-bazaar-shimla'
+      preLoaderRoute: typeof HotelNearLakkarBazaarShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-kufri': {
+      id: '/hotel-near-kufri'
+      path: '/hotel-near-kufri'
+      fullPath: '/hotel-near-kufri'
+      preLoaderRoute: typeof HotelNearKufriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-jakhu-temple-shimla': {
+      id: '/hotel-near-jakhu-temple-shimla'
+      path: '/hotel-near-jakhu-temple-shimla'
+      fullPath: '/hotel-near-jakhu-temple-shimla'
+      preLoaderRoute: typeof HotelNearJakhuTempleShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-near-christ-church-shimla': {
+      id: '/hotel-near-christ-church-shimla'
+      path: '/hotel-near-christ-church-shimla'
+      fullPath: '/hotel-near-christ-church-shimla'
+      preLoaderRoute: typeof HotelNearChristChurchShimlaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-in-mall-road': {
+      id: '/hotel-in-mall-road'
+      path: '/hotel-in-mall-road'
+      fullPath: '/hotel-in-mall-road'
+      preLoaderRoute: typeof HotelInMallRoadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hotel-in-budget-shimla': {
@@ -589,12 +814,23 @@ const rootRouteChildren: RootRouteChildren = {
   HotelAtKufriRoute: HotelAtKufriRoute,
   HotelAtMallRoadRoute: HotelAtMallRoadRoute,
   HotelInBudgetShimlaRoute: HotelInBudgetShimlaRoute,
+  HotelInMallRoadRoute: HotelInMallRoadRoute,
+  HotelNearChristChurchShimlaRoute: HotelNearChristChurchShimlaRoute,
+  HotelNearJakhuTempleShimlaRoute: HotelNearJakhuTempleShimlaRoute,
+  HotelNearKufriRoute: HotelNearKufriRoute,
+  HotelNearLakkarBazaarShimlaRoute: HotelNearLakkarBazaarShimlaRoute,
+  HotelNearScandalPointShimlaRoute: HotelNearScandalPointShimlaRoute,
+  HotelNearShimlaRoute: HotelNearShimlaRoute,
+  HotelNearShimlaRailwayStationRoute: HotelNearShimlaRailwayStationRoute,
+  HotelNearTheRidgeShimlaRoute: HotelNearTheRidgeShimlaRoute,
   LocationRoute: LocationRoute,
   NearbyAttractionsRoute: NearbyAttractionsRoute,
   PackagesOffersRoute: PackagesOffersRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RestaurantRoute: RestaurantRoute,
   ReviewsRoute: ReviewsRoute,
   RoomsRoute: RoomsRouteWithChildren,
+  ShimlaTravelGuideRoute: ShimlaTravelGuideRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   AttractionsKufriRoute: AttractionsKufriRoute,
   LocationsMallRoadRoute: LocationsMallRoadRoute,

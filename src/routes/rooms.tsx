@@ -6,8 +6,8 @@ import { buildPageHead, defaultBreadcrumb, jsonLdScript } from "@/lib/seo";
 export const Route = createFileRoute("/rooms")({
   head: () =>
     buildPageHead({
-      title: "Hotel Rooms in Shimla — Budget, Family & Deluxe Suites at Hotel Woodland",
-      description: "Hotel Woodland Shimla offers Standard Room (₹2,500), Super Deluxe (₹3,500), Family Suite (₹4,000). Budget-friendly, family-friendly rooms near Mall Road.",
+      title: "Hotel Rooms in Shimla | The Woodland Shimla",
+      description: "Choose a comfortable hotel room in Shimla at The Woodland with family-friendly layouts, mountain-facing comfort and convenient access to The Ridge and Mall Road.",
       path: "/rooms",
       image: ROOM_SUPER_DELUXE_IMAGE,
       scripts: [jsonLdScript(defaultBreadcrumb("Rooms", "/rooms"))],

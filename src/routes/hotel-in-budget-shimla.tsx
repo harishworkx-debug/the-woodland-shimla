@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell, PageHero } from "@/components/site/site-shell";
 import { buildPageHead, breadcrumbSchema, jsonLdScript } from "@/lib/seo";
+import { ROOM_STANDARD_IMAGE } from "@/lib/site-content";
 
 export const Route = createFileRoute("/hotel-in-budget-shimla")({
   head: () =>
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/hotel-in-budget-shimla")({
   component: () => (
     <SiteShell>
       <PageHero
+        image={ROOM_STANDARD_IMAGE}
         eyebrow="Budget Accommodation"
         title="Hotel in Budget Shimla"
         description="Affordable, clean rooms from ₹2,500/night at The Ridge. Perfect hotel in budget for families & couples."

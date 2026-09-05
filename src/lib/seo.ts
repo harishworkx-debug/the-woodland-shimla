@@ -21,6 +21,10 @@ export function buildPageHead({
   image?: string;
   scripts?: { type: string; children: string }[];
 }) {
+  const canonicalUrl = path.startsWith("http")
+    ? path
+    : `https://shimla.thewoodlandhotels.com${path.startsWith("/") ? path : `/${path}`}`;
+
   return {
     meta: [
       { title },
@@ -28,14 +32,15 @@ export function buildPageHead({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
+      { property: "og:url", content: canonicalUrl },
       ...(image ? [{ property: "og:image", content: image }] : []),
       { name: "twitter:card", content: image ? "summary_large_image" : "summary" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       ...(image ? [{ name: "twitter:image", content: image }] : []),
+      { name: "robots", content: "index, follow" },
     ],
-    links: [{ rel: "canonical", href: path }],
+    links: [{ rel: "canonical", href: canonicalUrl }],
     scripts,
   };
 }

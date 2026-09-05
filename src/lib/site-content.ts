@@ -218,12 +218,9 @@ export const GAIETY_IMAGE = gaietyImage;
 export const LAKKAR_IMAGE = lakkarImage;
 export const REVIEW_GUEST_IMAGE =
   "/__l5e/assets-v1/e1e0b381-6d06-4f97-a26b-71f0aac0a96a/review-guest.jpg";
-export const BLOG_HERITAGE_IMAGE =
-  "/__l5e/assets-v1/647a24fa-db21-488c-bd9c-04f2dfbed9bd/blog-heritage.jpg";
-export const BLOG_FOOD_IMAGE =
-  "/__l5e/assets-v1/b4b67434-227b-44f8-976b-095624343d08/blog-food.jpg";
-export const BLOG_GUIDE_IMAGE =
-  "/__l5e/assets-v1/b9c9770e-eaf0-490f-bcc9-6c499e5e1fa4/blog-guide.jpg";
+export const BLOG_HERITAGE_IMAGE = ridgeImage;
+export const BLOG_FOOD_IMAGE = diningImage;
+export const BLOG_GUIDE_IMAGE = attractionsHeaderImage;
 
 export const navigationItems = [
   { label: "About", to: "/about" },
@@ -242,7 +239,7 @@ export const roomTypes = ["Super Deluxe", "Standard Room", "Family Suite"];
 
 export const rooms: Room[] = [
     {
-    slug: "standard-room ",
+    slug: "standard-room",
     name: "Standard Room ",
     shortName: "Standard",
     tagline: "A polished comfort stay with cozy textures and boutique warmth.",
@@ -445,24 +442,32 @@ export const reviews: Review[] = [
 
 export const faqs = [
   {
-    question: "What are the check-in and check-out timings?",
-    answer: "Check-in is at 12 PM and check-out is at 12 PM. Early arrival or delayed departure requests can be discussed in advance, subject to availability.",
+    question: "Which is the best hotel in Shimla?",
+    answer: "The best hotel in Shimla depends on your travel priorities. For many guests, The Woodland Shimla stands out for its central location near The Ridge, comfortable rooms, family-friendly atmosphere and convenient access to Shimla attractions.",
   },
   {
-    question: "Is Hotel Woodland Shimla near The Ridge and Mall Road?",
-    answer: "Yes. The hotel is positioned near The Ridge area, making it convenient for guests who want to explore Shimla’s heritage core on foot or with short local transfers.",
+    question: "Where is The Woodland Shimla located?",
+    answer: "The Woodland Shimla is located in the The Ridge area of Shimla, close to Mall Road, shopping, dining and several of the hill station’s most-visited landmarks.",
   },
   {
-    question: "Are pets allowed or extra beds available?",
-    answer: "Pets are not allowed, and extra beds are not available according to the current policy set.",
+    question: "Is The Woodland Shimla near The Ridge?",
+    answer: "Yes. The hotel is positioned in the Shimla heritage area, making it convenient for guests who want to explore The Ridge and surrounding attractions with short local transfers or a walkable route.",
   },
   {
-    question: "What dining options are available at the hotel?",
-    answer: "The in-house dining experience serves Indian and Chinese cuisine, along with breakfast and dinner formats suited to leisure travellers and families.",
+    question: "Is the hotel suitable for families?",
+    answer: "Yes. The Woodland Shimla offers family-friendly room options, accessible comfort and a location that makes sightseeing in Shimla easier for longer stays and group travel.",
   },
   {
-    question: "How can I contact the hotel for direct booking assistance?",
-    answer: "You can call 01772 2811002 or message the hotel on WhatsApp at +91 94180 21100 for reservation support and stay planning.",
+    question: "Does the hotel provide parking?",
+    answer: "The property offers parking support for guests. It is best to confirm booking details directly with the hotel team for final arrangements and availability.",
+  },
+  {
+    question: "Does the hotel have a restaurant?",
+    answer: "Yes. The hotel has an in-house restaurant serving vegetarian meals and family dining, with room service also available for guests who prefer to stay in.",
+  },
+  {
+    question: "How can I contact The Woodland Shimla?",
+    answer: "You can call 01772 2811002 or message the hotel on WhatsApp at +91 94180 21100 for direct booking assistance and stay planning.",
   },
 ];
 
@@ -594,20 +599,48 @@ export const footerLinks = {
   explore: [
     { label: "About", to: "/about" },
     { label: "Rooms", to: "/rooms" },
+    { label: "Standard Room", to: "/rooms/standard-room" },
+    { label: "Super Deluxe", to: "/rooms/super-deluxe" },
+    { label: "Family Suite", to: "/rooms/family-suite" },
     { label: "Dining", to: "/dining" },
+    { label: "Restaurant", to: "/restaurant" },
     { label: "Gallery", to: "/gallery" },
+    { label: "Facilities", to: "/facilities" },
   ],
   stay: [
-    { label: "Facilities", to: "/facilities" },
     { label: "Offers", to: "/packages-offers" },
     { label: "Reviews", to: "/reviews" },
     { label: "FAQ", to: "/faq" },
+    { label: "Hotel in Shimla", to: "/hotel-near-shimla" },
+    { label: "Hotel near The Ridge", to: "/hotel-near-the-ridge-shimla" },
+    { label: "Hotel near Mall Road", to: "/hotel-in-mall-road" },
+    { label: "Hotel near Kufri", to: "/hotel-near-kufri" },
+    { label: "Hotel near Jakhu Temple", to: "/hotel-near-jakhu-temple-shimla" },
+    { label: "Hotel near Christ Church", to: "/hotel-near-christ-church-shimla" },
+    { label: "Hotel near Lakkar Bazaar", to: "/hotel-near-lakkar-bazaar-shimla" },
+    { label: "Hotel near Railway Station", to: "/hotel-near-shimla-railway-station" },
+    { label: "Hotel near Scandal Point", to: "/hotel-near-scandal-point-shimla" },
   ],
   policies: [
+    { label: "Location", to: "/location" },
+    { label: "Mall Road Guide", to: "/locations/mall-road" },
+    { label: "Nearby Attractions", to: "/nearby-attractions" },
+    { label: "Kufri Attractions", to: "/attractions/kufri" },
+    { label: "Shimla Travel Guide", to: "/shimla-travel-guide" },
+    { label: "Journal", to: "/blog" },
+    { label: "Boutique Stay Guide", to: "/blog/a-boutique-stay-near-the-ridge" },
+    { label: "Shimla Dining Guide", to: "/blog/where-to-eat-in-shimla-after-a-day-of-sightseeing" },
+    { label: "First-time Visitor Guide", to: "/blog/first-time-shimla-travel-guide" },
+    { label: "Family Hotel", to: "/family-hotel" },
+    { label: "Family Hotel in Shimla", to: "/family-hotel-in-shimla" },
+    { label: "Budget Hotel", to: "/budget-hotel" },
+    { label: "Budget Hotel in Shimla", to: "/hotel-in-budget-shimla" },
+    { label: "Hotel at Kufri", to: "/hotel-at-kufri" },
+    { label: "Best Hotel at Kufri", to: "/best-hotel-at-kufri" },
+    { label: "Hotel at Mall Road", to: "/hotel-at-mall-road" },
+    { label: "Contact", to: "/contact" },
     { label: "Privacy Policy", to: "/privacy-policy" },
     { label: "Terms & Conditions", to: "/terms-and-conditions" },
-    { label: "Location", to: "/location" },
-    { label: "Contact", to: "/contact" },
   ],
 };
 

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell, PageHero } from "@/components/site/site-shell";
 import { buildPageHead, breadcrumbSchema, jsonLdScript } from "@/lib/seo";
+import { ATTRACTIONS_HEADER_IMAGE } from "@/lib/site-content";
 
 export const Route = createFileRoute("/hotel-at-kufri")({
   head: () =>
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/hotel-at-kufri")({
   component: () => (
     <SiteShell>
       <PageHero
+        image={ATTRACTIONS_HEADER_IMAGE}
         eyebrow="Adventure Base"
         title="Hotel at Kufri"
         description="Hotel Woodland — 16 km from Kufri. Perfect base for adventure. Comfortable rooms, mountain views, warm hospitality."

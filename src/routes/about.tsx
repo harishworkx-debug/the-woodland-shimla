@@ -6,8 +6,8 @@ import { buildPageHead, defaultBreadcrumb, jsonLdScript } from "@/lib/seo";
 export const Route = createFileRoute("/about")({
   head: () =>
     buildPageHead({
-      title: "About Hotel Woodland Shimla — Hotel on The Ridge Near Mall Road",
-      description: "Hotel Woodland Shimla: Comfortable, affordable hotel on The Ridge. Family-friendly, warm hospitality, mountain views. Best hotel in Shimla for families & couples.",
+      title: "About The Woodland Shimla | Hotel in Shimla",
+      description: "Learn about The Woodland Shimla, a comfortable hotel near The Ridge with warm hospitality, easy access to Shimla attractions and a mountain-friendly stay experience.",
       path: "/about",
       image: HERO_EXTERIOR_IMAGE,
       scripts: [jsonLdScript(defaultBreadcrumb("About", "/about"))],
