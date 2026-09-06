@@ -57,102 +57,80 @@
 :root {
   --radius: 1.2rem;
 
-  /* Warm Ivory / Soft Cream backgrounds */
-  --background: oklch(0.972 0.008 85);
-  --foreground: oklch(0.26 0.006 50);
-  --card: oklch(0.988 0.004 85);
-  --card-foreground: oklch(0.26 0.006 50);
-  --popover: oklch(0.985 0.004 85 / 94%);
-  --popover-foreground: oklch(0.26 0.006 50);
-
-  /* Deep Forest Green primary */
-  --primary: oklch(0.31 0.035 155);
-  --primary-foreground: oklch(0.97 0.005 85);
-
-  /* Soft Cream secondary */
-  --secondary: oklch(0.94 0.008 82);
-  --secondary-foreground: oklch(0.28 0.006 50);
-
-  /* Warm muted tones */
-  --muted: oklch(0.93 0.008 80);
-  --muted-foreground: oklch(0.48 0.008 60);
-
-  /* Champagne Gold accent */
-  --accent: oklch(0.75 0.06 75);
-  --accent-foreground: oklch(0.22 0.02 50);
-
+  /* Alpine mist, ink, and cedar palette */
+  --background: oklch(0.97 0.012 160);
+  --foreground: oklch(0.22 0.025 220);
+  --card: oklch(0.995 0.004 160);
+  --card-foreground: oklch(0.22 0.025 220);
+  --popover: oklch(0.99 0.006 160 / 96%);
+  --popover-foreground: oklch(0.22 0.025 220);
+  --primary: oklch(0.36 0.055 195);
+  --primary-foreground: oklch(0.98 0.006 160);
+  --secondary: oklch(0.91 0.025 170);
+  --secondary-foreground: oklch(0.25 0.03 220);
+  --muted: oklch(0.93 0.015 170);
+  --muted-foreground: oklch(0.48 0.025 220);
+  --accent: oklch(0.68 0.12 55);
+  --accent-foreground: oklch(0.22 0.025 220);
   --destructive: oklch(0.55 0.18 25);
-  --destructive-foreground: oklch(0.97 0.005 85);
-
-  /* Subtle warm borders */
-  --border: oklch(0.88 0.008 75 / 55%);
-  --input: oklch(0.9 0.008 78 / 65%);
-  --ring: oklch(0.75 0.06 75 / 60%);
-
-  /* Surfaces */
-  --surface: oklch(0.955 0.008 82);
-  --surface-foreground: oklch(0.28 0.006 50);
-  --panel: oklch(0.98 0.004 85 / 80%);
-  --panel-foreground: oklch(0.28 0.006 50);
-
-  /* Champagne Gold luxury accent */
-  --luxury: oklch(0.72 0.075 75);
-  --luxury-foreground: oklch(0.2 0.015 50);
-
-  /* Rich Pine Green */
-  --forest: oklch(0.38 0.04 155);
-  --forest-foreground: oklch(0.96 0.005 85);
-
-  /* Warm Ivory */
-  --warm: oklch(0.95 0.008 80);
-  --line: oklch(0.82 0.008 72 / 40%);
-
-  /* Dark Evergreen for deep sections */
-  --evergreen: oklch(0.22 0.025 155);
-  --evergreen-foreground: oklch(0.95 0.005 85);
-
-  --shadow-soft: 0 24px 80px color-mix(in oklab, var(--primary) 8%, transparent);
-  --shadow-card: 0 12px 40px color-mix(in oklab, var(--primary) 6%, transparent);
-  --shadow-gold: 0 20px 60px color-mix(in oklab, var(--luxury) 20%, transparent);
+  --destructive-foreground: oklch(0.98 0.006 160);
+  --border: oklch(0.84 0.025 180 / 65%);
+  --input: oklch(0.86 0.025 180 / 75%);
+  --ring: oklch(0.68 0.12 55 / 60%);
+  --surface: oklch(0.945 0.02 170);
+  --surface-foreground: oklch(0.25 0.03 220);
+  --panel: oklch(0.985 0.008 160 / 86%);
+  --panel-foreground: oklch(0.25 0.03 220);
+  --luxury: oklch(0.68 0.12 55);
+  --luxury-foreground: oklch(0.22 0.025 220);
+  --forest: oklch(0.42 0.065 175);
+  --forest-foreground: oklch(0.97 0.008 160);
+  --warm: oklch(0.94 0.02 75);
+  --line: oklch(0.76 0.025 180 / 42%);
+  --evergreen: oklch(0.25 0.045 215);
+  --evergreen-foreground: oklch(0.97 0.008 160);
+  --shadow-soft: 0 24px 80px color-mix(in oklab, var(--primary) 10%, transparent);
+  --shadow-card: 0 12px 40px color-mix(in oklab, var(--primary) 8%, transparent);
+  --shadow-gold: 0 20px 60px color-mix(in oklab, var(--luxury) 22%, transparent);
   --shadow-evergreen: 0 30px 80px color-mix(in oklab, var(--evergreen) 30%, transparent);
-  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 45%, transparent) 0%, color-mix(in oklab, var(--evergreen) 25%, transparent) 50%, color-mix(in oklab, var(--evergreen) 55%, transparent) 100%);
-  --gradient-gold: linear-gradient(135deg, color-mix(in oklab, var(--luxury) 92%, white 8%), color-mix(in oklab, var(--luxury) 75%, color-mix(in oklab, var(--warm) 80%, var(--luxury) 20%) 25%));
+  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 52%, transparent) 0%, color-mix(in oklab, var(--evergreen) 28%, transparent) 50%, color-mix(in oklab, var(--evergreen) 72%, transparent) 100%);
+  --gradient-gold: linear-gradient(135deg, color-mix(in oklab, var(--luxury) 94%, white 6%), color-mix(in oklab, var(--luxury) 78%, var(--warm) 22%));
   --gradient-panel: linear-gradient(180deg, color-mix(in oklab, var(--panel) 96%, white 4%), color-mix(in oklab, var(--surface) 92%, transparent));
   --gradient-evergreen: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 96%, var(--primary) 4%), color-mix(in oklab, var(--primary) 90%, var(--evergreen) 10%));
 }
 
 .dark {
-  --background: oklch(0.16 0.02 155);
-  --foreground: oklch(0.95 0.005 85);
-  --card: oklch(0.2 0.025 155);
-  --card-foreground: oklch(0.95 0.005 85);
-  --popover: oklch(0.19 0.025 155 / 90%);
-  --popover-foreground: oklch(0.95 0.005 85);
-  --primary: oklch(0.72 0.075 75);
-  --primary-foreground: oklch(0.2 0.025 155);
-  --secondary: oklch(0.25 0.02 155);
-  --secondary-foreground: oklch(0.95 0.005 85);
-  --muted: oklch(0.23 0.018 155);
-  --muted-foreground: oklch(0.72 0.008 80);
-  --accent: oklch(0.72 0.075 75);
-  --accent-foreground: oklch(0.16 0.02 155);
+  --background: oklch(0.17 0.035 215);
+  --foreground: oklch(0.96 0.01 160);
+  --card: oklch(0.21 0.04 215);
+  --card-foreground: oklch(0.96 0.01 160);
+  --popover: oklch(0.2 0.04 215 / 94%);
+  --popover-foreground: oklch(0.96 0.01 160);
+  --primary: oklch(0.68 0.12 55);
+  --primary-foreground: oklch(0.18 0.035 215);
+  --secondary: oklch(0.26 0.04 205);
+  --secondary-foreground: oklch(0.96 0.01 160);
+  --muted: oklch(0.25 0.035 215);
+  --muted-foreground: oklch(0.75 0.02 180);
+  --accent: oklch(0.68 0.12 55);
+  --accent-foreground: oklch(0.17 0.035 215);
   --destructive: oklch(0.65 0.18 25);
-  --destructive-foreground: oklch(0.96 0.005 85);
-  --border: oklch(0.4 0.01 70 / 30%);
-  --input: oklch(0.35 0.01 70 / 40%);
-  --ring: oklch(0.72 0.06 75 / 50%);
-  --surface: oklch(0.22 0.02 155);
-  --surface-foreground: oklch(0.94 0.005 85);
-  --panel: oklch(0.24 0.02 155 / 75%);
-  --panel-foreground: oklch(0.95 0.005 85);
-  --luxury: oklch(0.72 0.075 75);
-  --luxury-foreground: oklch(0.16 0.02 155);
-  --forest: oklch(0.45 0.04 155);
-  --forest-foreground: oklch(0.95 0.005 85);
-  --warm: oklch(0.3 0.02 70);
-  --line: oklch(0.6 0.01 75 / 22%);
-  --evergreen: oklch(0.16 0.02 155);
-  --evergreen-foreground: oklch(0.95 0.005 85);
+  --destructive-foreground: oklch(0.96 0.01 160);
+  --border: oklch(0.45 0.03 190 / 36%);
+  --input: oklch(0.4 0.03 190 / 48%);
+  --ring: oklch(0.68 0.12 55 / 55%);
+  --surface: oklch(0.23 0.04 210);
+  --surface-foreground: oklch(0.94 0.01 160);
+  --panel: oklch(0.25 0.04 215 / 82%);
+  --panel-foreground: oklch(0.96 0.01 160);
+  --luxury: oklch(0.68 0.12 55);
+  --luxury-foreground: oklch(0.17 0.035 215);
+  --forest: oklch(0.5 0.065 175);
+  --forest-foreground: oklch(0.96 0.01 160);
+  --warm: oklch(0.33 0.035 80);
+  --line: oklch(0.62 0.03 190 / 25%);
+  --evergreen: oklch(0.14 0.035 215);
+  --evergreen-foreground: oklch(0.96 0.01 160);
 }
 
 @utility container-shell {
