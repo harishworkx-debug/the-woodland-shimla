@@ -106,6 +106,7 @@ function SiteHeader() {
   useEffect(() => setOpen(false), [location.pathname]);
 
   const navClass = scrolled ? "nav-shell" : "bg-transparent";
+  const isHome = location.pathname === "/";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-5">
@@ -115,13 +116,13 @@ function SiteHeader() {
             <img
               src={woodlandLogo}
               alt="Hotel Woodland Shimla logo"
-              className="h-11 w-11 shrink-0 rounded-full object-contain"
+              className="h-11 w-11 shrink-0 rounded-full object-contain ring-1 ring-luxury/20"
             />
             <div className="min-w-0">
-              <div className="truncate font-sans text-[0.68rem] uppercase tracking-[0.24em] text-muted-foreground">
-                The Woodland 
+              <div className={cn("truncate font-sans text-[0.68rem] uppercase tracking-[0.24em]", scrolled || !isHome ? "text-luxury" : "text-white/80")}>
+                The Woodland
               </div>
-              <div className="truncate text-lg font-semibold text-foreground">Shimla</div>
+              <div className={cn("truncate text-lg font-semibold", scrolled || !isHome ? "text-foreground" : "text-white")}>Shimla</div>
             </div>
           </Link>
 
@@ -130,16 +131,18 @@ function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="rounded-full px-4 py-2 text-sm text-foreground/80 transition hover:bg-panel hover:text-foreground"
-                activeProps={{ className: "bg-panel text-foreground" }}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm transition",
+                  scrolled || !isHome
+                    ? "text-foreground/80 hover:bg-surface hover:text-foreground"
+                    : "text-white/80 hover:bg-white/10 hover:text-white",
+                )}
+                activeProps={{ className: scrolled || !isHome ? "bg-surface text-foreground" : "bg-white/15 text-white" }}
               >
                 {item.label}
               </Link>
             ))}
             <div className="group relative ml-1">
-              {/* <button className="flex items-center gap-2 rounded-full px-4 py-2 text-sm text-foreground/80 transition hover:bg-panel hover:text-foreground">
-                More <ChevronDown className="h-4 w-4" />
-              </button> */}
               <div className="pointer-events-none absolute right-0 top-full mt-2 w-60 translate-y-2 rounded-[1.5rem] border border-border bg-panel p-2 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
                 {navigationItems.slice(8).map((item) => (
                   <Link
@@ -163,7 +166,7 @@ function SiteHeader() {
             <Button
               variant="nav"
               size="icon"
-              className="lg:hidden"
+              className={cn("lg:hidden", !scrolled && isHome && "text-white hover:bg-white/10")}
               aria-label={open ? "Close navigation" : "Open navigation"}
               onClick={() => setOpen((value) => !value)}
             >
@@ -206,38 +209,36 @@ function SiteHeader() {
 
 function SiteFooter() {
   return (
-    <footer className="relative z-10 bg-primary text-primary-foreground">
+    <footer className="relative z-10 bg-evergreen text-evergreen-foreground">
       <div className="section-shell grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="space-y-8">
           <div className="space-y-4">
-            <span className="eyebrow text-primary-foreground/70">A woodland address in old Shimla</span>
+            <span className="eyebrow text-luxury">A woodland address in old Shimla</span>
             <h2 className="max-w-3xl text-5xl sm:text-6xl">Book direct for the warmest arrival.</h2>
-            <p className="max-w-2xl text-base leading-8 text-primary-foreground/72 sm:text-lg">
+            <p className="max-w-2xl text-base leading-8 text-evergreen-foreground/72 sm:text-lg">
               Hotel Woodland Shimla blends a trusted hillside setting, refined room comfort and
               a slower boutique rhythm close to The Ridge. For tailored stay planning, connect
               with the team directly.
             </p>
           </div>
 
-          <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:grid-cols-3">
+          <div className="grid gap-6 rounded-[2rem] border border-luxury/15 bg-white/5 p-6 sm:grid-cols-3">
             <div>
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">Call</div>
-              <a href={`tel:${PHONE_TEL}`} className="mt-3 block text-lg text-primary-foreground">
+              <div className="text-xs uppercase tracking-[0.24em] text-luxury/80">Call</div>
+              <a href={`tel:${PHONE_TEL}`} className="mt-3 block text-lg text-evergreen-foreground">
                 {PHONE_DISPLAY}
               </a>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">WhatsApp</div>
-              <a href={`https://wa.me/${WHATSAPP_TEL.replace("+", "")}`} className="mt-3 block text-lg text-primary-foreground">
+              <div className="text-xs uppercase tracking-[0.24em] text-luxury/80">WhatsApp</div>
+              <a href={`https://wa.me/${WHATSAPP_TEL.replace("+", "")}`} className="mt-3 block text-lg text-evergreen-foreground">
                 {WHATSAPP_DISPLAY}
               </a>
             </div>
-            {/* <div>
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">Email placeholder</div>
-              <a href={`mailto:${EMAIL_PLACEHOLDER}`} className="mt-3 block text-lg text-primary-foreground">
-                {EMAIL_PLACEHOLDER}
-              </a>
-            </div> */}
+          </div>
+
+          <div className="pt-2">
+            <div className="text-3xl text-luxury/90">Your Himalayan Escape Awaits.</div>
           </div>
         </div>
 
@@ -248,23 +249,23 @@ function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-shell flex flex-col items-center gap-4 py-5 text-center text-sm text-primary-foreground/60">
+      <div className="border-t border-luxury/12">
+        <div className="container-shell flex flex-col items-center gap-4 py-5 text-center text-sm text-evergreen-foreground/60">
           <div>© 2026 {SITE_NAME}. Crafted for direct bookings and premium hospitality storytelling.</div>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href={MAPS_URL} target="_blank" rel="noreferrer" className="story-link">
               Google Maps
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-luxury/15 transition hover:border-luxury/40 hover:text-luxury">
               <FaInstagram />
             </a>
-            <a href={`https://wa.me/${WHATSAPP_TEL.replace("+", "")}`} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10">
+            <a href={`https://wa.me/${WHATSAPP_TEL.replace("+", "")}`} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-luxury/15 transition hover:border-luxury/40 hover:text-luxury">
               <FaWhatsapp />
             </a>
           </div>
           <div>
             Powered by{' '}
-            <a href="https://www.techhim.online/" target="_blank" rel="noreferrer" className="font-medium text-primary-foreground/90 transition hover:text-primary-foreground">
+            <a href="https://www.techhim.online/" target="_blank" rel="noreferrer" className="font-medium text-luxury/80 transition hover:text-luxury">
               TechHim Solutions
             </a>
           </div>
@@ -277,10 +278,10 @@ function SiteFooter() {
 function FooterColumn({ title, links }: { title: string; links: { label: string; to: string }[] }) {
   return (
     <div>
-      <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/55">{title}</div>
+      <div className="text-xs uppercase tracking-[0.24em] text-luxury/70">{title}</div>
       <div className="mt-4 grid gap-3">
         {links.map((link) => (
-          <Link key={link.to} to={link.to} className="text-sm text-primary-foreground/80 transition hover:text-primary-foreground">
+          <Link key={link.to} to={link.to} className="text-sm text-evergreen-foreground/75 transition hover:text-luxury">
             {link.label}
           </Link>
         ))}
@@ -386,7 +387,7 @@ export function HomePage() {
               The experience is built around thoughtful service, timber-toned rooms, a relaxed
               dining rhythm and the reassurance of a property that values hospitality over excess.
             </p>
-            <Button asChild variant="dark" size="lg">
+            <Button asChild variant="evergreen" size="lg">
               <Link to="/about">Discover the story</Link>
             </Button>
           </div>
@@ -445,16 +446,17 @@ function HomeHero() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
           <div className="max-w-4xl text-white">
             <Reveal>
-              <div className="eyebrow text-white/74">The Woodland Shimla</div>
+              <div className="eyebrow text-luxury/90">The Woodland Shimla</div>
             </Reveal>
             <Reveal delay={0.05}>
               <h1 className="display-title mt-5 text-[4.1rem] sm:text-[5.8rem] lg:text-[8rem]">
-                Best Hotel in Shimla
+                Where the Mountains
+                <span className="block text-luxury/95">Meet Tranquility</span>
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
-                Experience a comfortable mountain stay near The Ridge with scenic surroundings, thoughtful amenities and easy access to Shimla&apos;s most-loved attractions.
+                A quiet escape in the heart of the Himalayas. Experience a comfortable mountain stay near The Ridge with scenic surroundings, thoughtful amenities and easy access to Shimla&apos;s most-loved attractions.
               </p>
             </Reveal>
             <Reveal delay={0.14}>
@@ -464,8 +466,8 @@ function HomeHero() {
                     <Link to="/contact">Book Your Stay</Link>
                   </Button>
                 </MagneticButton>
-                <Button asChild variant="outline" size="lg" className="border-white/25 bg-white/10 text-white hover:bg-white/18 hover:text-white">
-                  <Link to="/rooms">Explore Rooms</Link>
+                <Button asChild variant="outline" size="lg" className="border-luxury/40 bg-white/5 text-white hover:border-luxury hover:bg-luxury/10 hover:text-white">
+                  <Link to="/rooms">Explore The Hotel</Link>
                 </Button>
               </div>
             </Reveal>
@@ -476,7 +478,7 @@ function HomeHero() {
           </Reveal>
         </div>
 
-        <div className="flex items-center justify-between gap-4 text-white/70">
+        <div className="flex items-center justify-between gap-4 text-white/60">
           <div className="flex flex-wrap gap-5 text-xs uppercase tracking-[0.18em] sm:text-sm">
             <span>Luxury comfort</span>
             <span>Boutique scale</span>
@@ -484,7 +486,11 @@ function HomeHero() {
           </div>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.24em] sm:text-sm">
             <span>Scroll</span>
-            <div className="h-10 w-px bg-white/25" />
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              className="h-8 w-px bg-luxury/50"
+            />
           </div>
         </div>
       </div>
@@ -505,10 +511,10 @@ export function BookingWidget() {
         </div>
       </div>
       <div className="grid gap-3">
-        <BookingField icon={<CalendarDays className="h-4 w-4" />} label="Arrival" value="Select date" />
-        <BookingField icon={<CalendarDays className="h-4 w-4" />} label="Departure" value="Select date" />
+        <BookingField icon={<CalendarDays className="h-4 w-4" />} label="Check-In" value="Select date" />
+        <BookingField icon={<CalendarDays className="h-4 w-4" />} label="Check-Out" value="Select date" />
         <BookingField icon={<Users className="h-4 w-4" />} label="Guests" value="2 Adults" />
-        <BookingField icon={<ChevronDown className="h-4 w-4" />} label="Room Type" value={roomTypes[0]} />
+        <BookingField icon={<ChevronDown className="h-4 w-4" />} label="Rooms" value={roomTypes[0]} />
       </div>
       <Button asChild variant="hero" size="lg" className="mt-5 w-full justify-center">
         <Link to="/contact">Check Availability</Link>
@@ -523,7 +529,7 @@ export function BookingWidget() {
 
 function BookingField({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
-    <div className="rounded-[1.4rem] border border-border bg-background/70 px-4 py-3">
+    <div className="rounded-[1.4rem] border border-luxury/20 bg-background/70 px-4 py-3 transition hover:border-luxury/40">
       <div className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground">
         {icon}
         {label}
@@ -600,35 +606,25 @@ export function RoomsShowcase() {
 
 export function RoomCard({ room }: { room: (typeof rooms)[number] }) {
   return (
-    <div className="interactive-card glass-panel group overflow-hidden rounded-[2rem]">
-      <div className="image-mask aspect-[0.95] rounded-none rounded-t-[2rem]">
+    <div className="interactive-card group relative overflow-hidden rounded-[2rem]">
+      <div className="image-mask aspect-[0.95]">
         <img src={room.image} alt={room.alt} className="image-mask-inner" loading="lazy" />
-      </div>
-      <div className="space-y-5 p-5">
-        <div className="space-y-2">
-          <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">{room.size}</div>
-          <h3 className="text-4xl">{room.name}</h3>
-          <p className="text-sm leading-7 text-muted-foreground">{room.tagline}</p>
-        </div>
-        <div className="grid grid-cols-2 gap-3 text-sm text-foreground/75">
-          {room.highlights.map((item) => (
-            <div key={item.label} className="rounded-[1.1rem] border border-border bg-background/70 p-3">
-              <item.icon className="mb-2 h-4 w-4 text-luxury" />
-              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</div>
-              <div className="mt-1">{item.value}</div>
+        <div className="absolute inset-0 bg-gradient-to-t from-evergreen/80 via-evergreen/20 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+          <div className="text-xs uppercase tracking-[0.24em] text-luxury/90">{room.size}</div>
+          <h3 className="mt-2 text-4xl">{room.name}</h3>
+          <p className="mt-2 text-sm leading-7 text-white/75">{room.tagline}</p>
+          <div className="mt-4 flex items-center justify-between gap-4">
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/55">{room.occupancy}</div>
+              <div className="mt-1 text-lg text-luxury">{room.pricing}</div>
             </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-between gap-4 border-t border-border pt-4">
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Stay detail</div>
-            <div className="mt-1 text-sm text-foreground">{room.occupancy}</div>
+            <Button asChild variant="hero" size="sm">
+              <Link to="/rooms/$roomSlug" params={{ roomSlug: room.slug }}>
+                View Room
+              </Link>
+            </Button>
           </div>
-          <Button asChild variant="dark">
-            <Link to="/rooms/$roomSlug" params={{ roomSlug: room.slug }}>
-              View Details
-            </Link>
-          </Button>
         </div>
       </div>
     </div>
@@ -764,12 +760,12 @@ export function GallerySection({
 export function ExperienceSection() {
   return (
     <section className="section-shell">
-      <div className="grid gap-10 rounded-[2.5rem] bg-primary px-6 py-10 text-primary-foreground sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12 lg:py-14">
+      <div className="grid gap-10 rounded-[2.5rem] bg-evergreen px-6 py-10 text-evergreen-foreground sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12 lg:py-14">
         <Reveal>
           <div className="space-y-5">
-            <span className="eyebrow text-primary-foreground/60">Why Woodland</span>
+            <span className="eyebrow text-luxury/80">Why Woodland</span>
             <h2 className="section-title text-5xl sm:text-6xl">A stay built on trust, location and warmth rather than excess.</h2>
-            <p className="max-w-2xl text-base leading-8 text-primary-foreground/74 sm:text-lg">
+            <p className="max-w-2xl text-base leading-8 text-evergreen-foreground/74 sm:text-lg">
               Woodland’s appeal lies in its balance: close enough to the heritage heart of Shimla,
               quiet enough to feel restorative, and warm enough to feel like a return rather than a
               transaction.
@@ -784,9 +780,9 @@ export function ExperienceSection() {
               ["Nature", "Mountain weather, hillside views and slower mornings."],
               ["Location", "Easy access to The Ridge, Mall Road and cultural landmarks."],
             ].map(([title, description]) => (
-              <div key={title} className="rounded-[1.7rem] border border-white/10 bg-white/6 p-5">
-                <div className="text-2xl">{title}</div>
-                <p className="mt-3 text-sm leading-7 text-primary-foreground/72">{description}</p>
+              <div key={title} className="rounded-[1.7rem] border border-luxury/15 bg-white/5 p-5 transition hover:border-luxury/30">
+                <div className="text-2xl text-luxury">{title}</div>
+                <p className="mt-3 text-sm leading-7 text-evergreen-foreground/72">{description}</p>
               </div>
             ))}
           </div>
@@ -867,8 +863,9 @@ export function ReviewsSection() {
           {reviews.map((review) => (
             <div key={review.name} className="min-w-0 flex-[0_0_100%] md:flex-[0_0_60%] xl:flex-[0_0_42%]">
               <div className="glass-panel h-full rounded-[2rem] p-6">
+                <div className="mb-4 text-6xl leading-none text-luxury/40">“</div>
                 <div className="mb-5 flex items-center gap-4">
-                  <img src={review.image} alt={`Placeholder guest portrait for ${review.name}`} className="h-16 w-16 rounded-full object-cover" loading="lazy" />
+                  <img src={review.image} alt={`Guest portrait for ${review.name}`} className="h-16 w-16 rounded-full object-cover ring-1 ring-luxury/20" loading="lazy" />
                   <div>
                     <div className="text-xl text-foreground">{review.name}</div>
                     <div className="text-sm text-muted-foreground">{review.location} · {review.stay}</div>
@@ -916,8 +913,8 @@ function CounterCard({ value, suffix, label }: { value: number; suffix: string; 
   const current = value % 1 === 0 ? Math.round(display).toString() : display.toFixed(1);
 
   return (
-    <div className="rounded-[1.8rem] border border-border bg-surface p-5">
-      <div className="text-4xl text-foreground sm:text-5xl">{current}{suffix}</div>
+    <div className="rounded-[1.8rem] border border-luxury/15 bg-surface p-5 transition hover:border-luxury/30">
+      <div className="text-4xl text-primary sm:text-5xl">{current}<span className="text-luxury">{suffix}</span></div>
       <div className="mt-2 text-sm uppercase tracking-[0.18em] text-muted-foreground">{label}</div>
     </div>
   );
@@ -992,7 +989,7 @@ export function SisterPropertySection() {
 
   return (
     <section className="section-shell">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-primary text-primary-foreground">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-evergreen text-evergreen-foreground">
         <div className="absolute inset-0 opacity-25">
           <img
             src="https://www.thewoodlandhotels.com/assets/exterior-night-C4Jr-vbU.jpg"
@@ -1002,19 +999,19 @@ export function SisterPropertySection() {
             loading="lazy"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/70 to-primary/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-evergreen/85 via-evergreen/70 to-evergreen/95" />
 
         <div className="relative grid gap-10 p-8 sm:p-12 lg:grid-cols-[1.05fr_1fr] lg:p-16">
           <Reveal className="flex flex-col justify-center gap-6">
-            <span className="eyebrow text-primary-foreground/70">Our sister property</span>
-            <h2 className="section-title text-5xl text-primary-foreground sm:text-6xl">
+            <span className="eyebrow text-luxury/80">Our sister property</span>
+            <h2 className="section-title text-5xl text-evergreen-foreground sm:text-6xl">
               The Woodland Kandaghat — a boutique retreat between Shimla &amp; Chail.
             </h2>
-            <p className="max-w-xl text-base leading-8 text-primary-foreground/80 sm:text-lg">
+            <p className="max-w-xl text-base leading-8 text-evergreen-foreground/80 sm:text-lg">
               Tucked into Himalayan pines on NH-5, our second home offers layered valley views,
               fresh Indian cuisine and the same warm Woodland hospitality — just a scenic drive away.
             </p>
-            <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-[0.22em] text-primary-foreground/70">
+            <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-[0.22em] text-luxury/70">
               <span>12+ years</span>
               <span>10K+ guests</span>
               <span>4.7★ rated</span>
@@ -1029,7 +1026,7 @@ export function SisterPropertySection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground"
+                className="border-luxury/30 bg-white/5 text-evergreen-foreground hover:border-luxury hover:bg-luxury/10 hover:text-evergreen-foreground"
               >
                 <a href="tel:+919418021100">Call +91 94180 21100</a>
               </Button>
@@ -1068,24 +1065,24 @@ export function MapSection() {
               for travellers who want a more walkable, story-rich Shimla stay.
             </p>
             <div className="grid gap-3">
-              <div className="flex items-start gap-3 rounded-[1.4rem] border border-border bg-background px-4 py-4 text-sm leading-7 text-foreground/82">
+              <div className="flex items-start gap-3 rounded-[1.4rem] border border-luxury/15 bg-background px-4 py-4 text-sm leading-7 text-foreground/82">
                 <MapPin className="mt-1 h-4 w-4 text-luxury" />
                 <span>{ADDRESS_LINES.join(", ")}</span>
               </div>
               {distances.map((item) => (
-                <div key={item.label} className="flex items-center justify-between rounded-[1.4rem] border border-border bg-background px-4 py-4 text-sm">
+                <div key={item.label} className="flex items-center justify-between rounded-[1.4rem] border border-luxury/15 bg-background px-4 py-4 text-sm">
                   <span className="text-muted-foreground">{item.label}</span>
                   <span className="text-foreground">{item.value}</span>
                 </div>
               ))}
             </div>
-            <Button asChild variant="dark" size="lg">
+            <Button asChild variant="evergreen" size="lg">
               <a href={MAPS_URL} target="_blank" rel="noreferrer">Open Google Maps</a>
             </Button>
           </div>
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="overflow-hidden rounded-[2rem] border border-border bg-card">
+          <div className="overflow-hidden rounded-[2rem] border border-luxury/15 bg-card">
             <iframe
               src={MAP_EMBED_SRC}
               title="Hotel Woodland Shimla map"
@@ -1341,18 +1338,18 @@ export function PolicyContent({ title, intro, sections }: { title: string; intro
 
 export function NotFoundLuxury() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-primary pt-28 text-primary-foreground">
+    <section className="relative min-h-screen overflow-hidden bg-evergreen pt-28 text-evergreen-foreground">
       <div className="section-shell flex min-h-[75vh] flex-col items-center justify-center text-center">
         <motion.div
-          className="mb-8 text-[8rem] sm:text-[10rem]"
+          className="mb-8 text-[8rem] sm:text-[10rem] text-luxury/60"
           animate={{ y: [0, -10, 0] }}
           transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
         >
           ⛰
         </motion.div>
-        <div className="eyebrow text-primary-foreground/60">404</div>
+        <div className="eyebrow text-luxury/70">404</div>
         <h1 className="mt-4 text-6xl sm:text-7xl">The path disappears into the hills.</h1>
-        <p className="mt-5 max-w-2xl text-base leading-8 text-primary-foreground/74 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base leading-8 text-evergreen-foreground/74 sm:text-lg">
           The page you were looking for is not available. Return to Hotel Woodland Shimla and begin again from the main story.
         </p>
         <Button asChild variant="hero" size="lg" className="mt-8">

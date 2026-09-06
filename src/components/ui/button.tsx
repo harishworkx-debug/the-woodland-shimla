@@ -13,15 +13,17 @@ const buttonVariants = cva(
           "luxe-button-fill hover:-translate-y-0.5 hover:brightness-105",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:brightness-95",
         outline:
-          "border border-border bg-panel text-panel-foreground shadow-sm hover:border-luxury/60 hover:bg-surface",
+          "border border-luxury/40 bg-transparent text-foreground shadow-sm hover:border-luxury hover:bg-luxury/8",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-surface",
         ghost: "text-foreground hover:bg-surface hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        nav: "bg-panel text-panel-foreground border border-transparent hover:border-border hover:bg-surface",
+        nav: "bg-transparent text-foreground border border-transparent hover:border-border hover:bg-surface",
         hero:
           "luxe-button-fill px-7 py-6 text-sm uppercase tracking-[0.18em] hover:-translate-y-0.5",
         dark:
-          "bg-primary text-primary-foreground shadow-[0_16px_40px_color-mix(in_oklab,var(--primary)_22%,transparent)] hover:bg-primary/90",
+          "bg-primary text-primary-foreground shadow-[0_16px_40px_color-mix(in_oklab,var(--primary)_18%,transparent)] hover:bg-primary/90",
+        evergreen:
+          "bg-evergreen text-evergreen-foreground shadow-[0_16px_40px_color-mix(in_oklab,var(--evergreen)_22%,transparent)] hover:bg-evergreen/90",
       },
       size: {
         default: "h-11 px-5 py-3",
