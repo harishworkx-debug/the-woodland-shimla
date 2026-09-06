@@ -139,14 +139,14 @@ function SiteHeader() {
                     ? "text-evergreen-foreground/82 hover:bg-white/10 hover:text-evergreen-foreground"
                     : "text-white/88 hover:bg-white/10 hover:text-white",
                 )}
-                activeProps={{ className: cn("relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em]", scrolled || !isHome ? "bg-luxury/12 text-foreground" : "bg-white/15 text-white") }}
+                activeProps={{ className: cn("relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em]", scrolled || !isHome ? "bg-luxury/12 text-evergreen-foreground" : "bg-white/15 text-white") }}
               >
                 {item.label}
                 <span className="absolute inset-x-3 -bottom-0.5 h-0.5 origin-center scale-x-0 rounded-full bg-luxury transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             ))}
             <div className="group relative ml-1">
-              <button type="button" className={cn("flex items-center gap-1 rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-all", scrolled || !isHome ? "text-foreground/65 hover:bg-luxury/10 hover:text-foreground" : "text-white/75 hover:bg-white/10 hover:text-white")}>
+              <button type="button" className={cn("flex items-center gap-1 rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-all", scrolled || !isHome ? "text-evergreen-foreground/82 hover:bg-white/10 hover:text-evergreen-foreground" : "text-white/88 hover:bg-white/10 hover:text-white")}>
                 More <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
               </button>
               <div className="pointer-events-none absolute right-0 top-full mt-3 w-60 translate-y-2 rounded-2xl border border-luxury/20 bg-panel/95 p-2 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-xl transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
@@ -436,13 +436,13 @@ function HomeHero() {
   }, [slides.length]);
 
   return (
-    <section className="relative isolate min-h-screen overflow-hidden pt-24">
+    <section className="relative isolate min-h-screen overflow-hidden bg-evergreen pt-24">
       {slides.map((slide, slideIndex) => (
         <motion.img
           key={slideIndex}
           src={slide}
           alt={slideIndex === 0 ? "Hotel Woodland Shimla exterior hero image" : "Hotel Woodland Shimla exterior view"}
-          className="absolute inset-0 h-full w-full object-cover"
+className="absolute inset-0 h-full w-full object-contain object-top"
           animate={{ opacity: slideIndex === index ? 1 : 0, scale: slideIndex === index ? 1 : 1.06 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         />
