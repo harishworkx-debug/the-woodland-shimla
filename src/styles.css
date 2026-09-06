@@ -57,20 +57,20 @@
 :root {
   --radius: 1.2rem;
 
-  /* Alpine mist, ink, and cedar palette */
-  --background: oklch(0.97 0.012 160);
-  --foreground: oklch(0.22 0.025 220);
-  --card: oklch(0.995 0.004 160);
-  --card-foreground: oklch(0.22 0.025 220);
-  --popover: oklch(0.99 0.006 160 / 96%);
-  --popover-foreground: oklch(0.22 0.025 220);
-  --primary: oklch(0.36 0.055 195);
-  --primary-foreground: oklch(0.98 0.006 160);
-  --secondary: oklch(0.91 0.025 170);
-  --secondary-foreground: oklch(0.25 0.03 220);
-  --muted: oklch(0.93 0.015 170);
-  --muted-foreground: oklch(0.48 0.025 220);
-  --accent: oklch(0.68 0.12 55);
+  /* Boutique mountain lodge palette: ink, ivory, brass, and pine */
+  --background: oklch(0.965 0.018 84);
+  --foreground: oklch(0.19 0.025 180);
+  --card: oklch(0.985 0.012 84);
+  --card-foreground: oklch(0.19 0.025 180);
+  --popover: oklch(0.985 0.012 84 / 97%);
+  --popover-foreground: oklch(0.19 0.025 180);
+  --primary: oklch(0.28 0.055 177);
+  --primary-foreground: oklch(0.97 0.012 84);
+  --secondary: oklch(0.9 0.03 84);
+  --secondary-foreground: oklch(0.23 0.035 180);
+  --muted: oklch(0.91 0.025 84);
+  --muted-foreground: oklch(0.43 0.03 180);
+  --accent: oklch(0.72 0.13 75);
   --accent-foreground: oklch(0.22 0.025 220);
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(0.98 0.006 160);
@@ -81,19 +81,19 @@
   --surface-foreground: oklch(0.25 0.03 220);
   --panel: oklch(0.985 0.008 160 / 86%);
   --panel-foreground: oklch(0.25 0.03 220);
-  --luxury: oklch(0.68 0.12 55);
-  --luxury-foreground: oklch(0.22 0.025 220);
-  --forest: oklch(0.42 0.065 175);
-  --forest-foreground: oklch(0.97 0.008 160);
-  --warm: oklch(0.94 0.02 75);
-  --line: oklch(0.76 0.025 180 / 42%);
-  --evergreen: oklch(0.25 0.045 215);
+  --luxury: oklch(0.72 0.13 75);
+  --luxury-foreground: oklch(0.2 0.025 180);
+  --forest: oklch(0.38 0.07 165);
+  --forest-foreground: oklch(0.97 0.012 84);
+  --warm: oklch(0.93 0.035 78);
+  --line: oklch(0.68 0.035 84 / 42%);
+  --evergreen: oklch(0.2 0.045 177);
   --evergreen-foreground: oklch(0.97 0.008 160);
   --shadow-soft: 0 24px 80px color-mix(in oklab, var(--primary) 10%, transparent);
   --shadow-card: 0 12px 40px color-mix(in oklab, var(--primary) 8%, transparent);
   --shadow-gold: 0 20px 60px color-mix(in oklab, var(--luxury) 22%, transparent);
   --shadow-evergreen: 0 30px 80px color-mix(in oklab, var(--evergreen) 30%, transparent);
-  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 52%, transparent) 0%, color-mix(in oklab, var(--evergreen) 28%, transparent) 50%, color-mix(in oklab, var(--evergreen) 72%, transparent) 100%);
+  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 34%, transparent) 0%, color-mix(in oklab, var(--evergreen) 16%, transparent) 38%, color-mix(in oklab, var(--evergreen) 82%, transparent) 100%);
   --gradient-gold: linear-gradient(135deg, color-mix(in oklab, var(--luxury) 94%, white 6%), color-mix(in oklab, var(--luxury) 78%, var(--warm) 22%));
   --gradient-panel: linear-gradient(180deg, color-mix(in oklab, var(--panel) 96%, white 4%), color-mix(in oklab, var(--surface) 92%, transparent));
   --gradient-evergreen: linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 96%, var(--primary) 4%), color-mix(in oklab, var(--primary) 90%, var(--evergreen) 10%));
@@ -142,10 +142,10 @@
 }
 
 @utility glass-panel {
-  background: var(--gradient-panel);
-  backdrop-filter: blur(20px);
-  border: 1px solid color-mix(in oklab, var(--border) 60%, color-mix(in oklab, var(--luxury) 15%, white) 40%);
-  box-shadow: var(--shadow-card);
+  background: color-mix(in oklab, var(--panel) 88%, transparent);
+  backdrop-filter: blur(24px) saturate(1.15);
+  border: 1px solid color-mix(in oklab, var(--luxury) 24%, var(--border) 76%);
+  box-shadow: 0 24px 70px color-mix(in oklab, var(--evergreen) 14%, transparent), inset 0 1px 0 color-mix(in oklab, white 40%, transparent);
 }
 
 @utility luxury-shadow {
@@ -187,21 +187,23 @@
 }
 
 @utility nav-shell {
-  background: color-mix(in oklab, var(--evergreen) 88%, transparent);
-  backdrop-filter: blur(26px) saturate(1.2);
-  border: 1px solid color-mix(in oklab, var(--luxury) 28%, transparent);
-  box-shadow: 0 14px 42px color-mix(in oklab, var(--evergreen) 24%, transparent), inset 0 1px 0 color-mix(in oklab, white 12%, transparent);
+  background: color-mix(in oklab, var(--evergreen) 92%, transparent);
+  backdrop-filter: blur(28px) saturate(1.35);
+  border: 1px solid color-mix(in oklab, var(--luxury) 38%, transparent);
+  box-shadow: 0 18px 55px color-mix(in oklab, var(--evergreen) 30%, transparent), inset 0 1px 0 color-mix(in oklab, white 16%, transparent);
 }
 
 @utility hero-overlay {
   background:
-    linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 55%, transparent) 0%, color-mix(in oklab, var(--evergreen) 30%, transparent) 40%, color-mix(in oklab, var(--evergreen) 70%, transparent) 100%),
-    linear-gradient(90deg, color-mix(in oklab, var(--evergreen) 50%, transparent) 0%, transparent 55%);
+    linear-gradient(180deg, color-mix(in oklab, var(--evergreen) 28%, transparent) 0%, color-mix(in oklab, var(--evergreen) 10%, transparent) 48%, color-mix(in oklab, var(--evergreen) 42%, transparent) 100%),
+    linear-gradient(90deg, color-mix(in oklab, var(--evergreen) 58%, transparent) 0%, color-mix(in oklab, var(--evergreen) 8%, transparent) 58%, transparent 100%);
 }
 
 @utility image-mask {
   overflow: hidden;
   border-radius: 1.7rem;
+  box-shadow: 0 28px 80px color-mix(in oklab, var(--evergreen) 18%, transparent);
+  border: 1px solid color-mix(in oklab, var(--luxury) 22%, transparent);
 }
 
 @utility image-mask-inner {

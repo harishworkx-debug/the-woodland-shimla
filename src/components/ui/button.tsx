@@ -17,7 +17,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-surface",
         ghost: "text-foreground hover:bg-surface hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        nav: "bg-transparent text-foreground border border-transparent hover:border-border hover:bg-surface",
+        nav: "bg-transparent text-evergreen-foreground border border-transparent hover:border-luxury/30 hover:bg-white/10 hover:text-evergreen-foreground",
         hero:
           "luxe-button-fill px-7 py-6 text-sm uppercase tracking-[0.18em] hover:-translate-y-0.5",
         dark:
