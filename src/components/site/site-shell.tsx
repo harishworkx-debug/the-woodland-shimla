@@ -135,9 +135,9 @@ function SiteHeader() {
                 to={item.to}
                 className={cn(
                   "relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-all duration-300",
-                  scrolled || !isHome
-                    ? "text-foreground/65 hover:bg-luxury/10 hover:text-foreground"
-                    : "text-white/75 hover:bg-white/10 hover:text-white",
+                    scrolled || !isHome
+                    ? "text-evergreen-foreground/82 hover:bg-white/10 hover:text-evergreen-foreground"
+                    : "text-white/88 hover:bg-white/10 hover:text-white",
                 )}
                 activeProps={{ className: cn("relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em]", scrolled || !isHome ? "bg-luxury/12 text-foreground" : "bg-white/15 text-white") }}
               >
@@ -172,7 +172,7 @@ function SiteHeader() {
             <Button
               variant="nav"
               size="icon"
-              className={cn("lg:hidden", !scrolled && isHome && "text-white hover:bg-white/10")}
+              className={cn("lg:hidden", "text-evergreen-foreground hover:bg-white/10", !scrolled && isHome && "text-white hover:bg-white/10")}
               aria-label={open ? "Close navigation" : "Open navigation"}
               onClick={() => setOpen((value) => !value)}
             >
