@@ -187,10 +187,10 @@
 }
 
 @utility nav-shell {
-  background: color-mix(in oklab, var(--evergreen) 92%, transparent);
-  backdrop-filter: blur(24px);
-  border: 1px solid color-mix(in oklab, var(--luxury) 18%, transparent);
-  box-shadow: 0 8px 32px color-mix(in oklab, var(--evergreen) 20%, transparent);
+  background: color-mix(in oklab, var(--evergreen) 88%, transparent);
+  backdrop-filter: blur(26px) saturate(1.2);
+  border: 1px solid color-mix(in oklab, var(--luxury) 28%, transparent);
+  box-shadow: 0 14px 42px color-mix(in oklab, var(--evergreen) 24%, transparent), inset 0 1px 0 color-mix(in oklab, white 12%, transparent);
 }
 
 @utility hero-overlay {
