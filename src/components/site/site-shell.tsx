@@ -442,7 +442,7 @@ function HomeHero() {
           key={slideIndex}
           src={slide}
           alt={slideIndex === 0 ? "Hotel Woodland Shimla exterior hero image" : "Hotel Woodland Shimla exterior view"}
-className="absolute inset-0 h-full w-full object-contain object-top"
+className="absolute inset-0 h-full w-full object-cover object-center"
           animate={{ opacity: slideIndex === index ? 1 : 0, scale: slideIndex === index ? 1 : 1.06 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         />
