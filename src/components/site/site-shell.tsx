@@ -110,19 +110,21 @@ function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-5">
-      <div className={cn("container-shell rounded-full transition-all duration-500", navClass)}>
+      <div className={cn("container-shell rounded-[1.7rem] transition-all duration-500", navClass)}>
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3 px-2 py-2 sm:px-3">
-          <Link to="/" className="flex min-w-0 items-center gap-3 rounded-full px-3 py-2">
-            <img
-              src={woodlandLogo}
-              alt="Hotel Woodland Shimla logo"
-              className="h-11 w-11 shrink-0 rounded-full object-contain ring-1 ring-luxury/20"
-            />
-            <div className="min-w-0">
-              <div className={cn("truncate font-sans text-[0.68rem] uppercase tracking-[0.24em]", scrolled || !isHome ? "text-luxury" : "text-white/80")}>
+          <Link to="/" className="group flex min-w-0 items-center gap-3 rounded-2xl px-3 py-2">
+            <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-luxury/12 ring-1 ring-luxury/30 transition-transform duration-300 group-hover:rotate-[-4deg] group-hover:scale-105">
+              <img
+                src={woodlandLogo}
+                alt="Hotel Woodland Shimla logo"
+                className="h-9 w-9 rounded-full object-contain"
+              />
+            </span>
+            <div className="min-w-0 leading-none">
+              <div className={cn("truncate font-sans text-[0.62rem] font-semibold uppercase tracking-[0.28em]", scrolled || !isHome ? "text-luxury" : "text-white/80")}>
                 The Woodland
               </div>
-              <div className={cn("truncate text-lg font-semibold", scrolled || !isHome ? "text-foreground" : "text-white")}>Shimla</div>
+              <div className={cn("mt-1 truncate font-display text-[1.45rem] font-semibold", scrolled || !isHome ? "text-foreground" : "text-white")}>Shimla</div>
             </div>
           </Link>
 
@@ -132,23 +134,27 @@ function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm transition",
+                  "relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-all duration-300",
                   scrolled || !isHome
-                    ? "text-foreground/80 hover:bg-surface hover:text-foreground"
-                    : "text-white/80 hover:bg-white/10 hover:text-white",
+                    ? "text-foreground/65 hover:bg-luxury/10 hover:text-foreground"
+                    : "text-white/75 hover:bg-white/10 hover:text-white",
                 )}
-                activeProps={{ className: scrolled || !isHome ? "bg-surface text-foreground" : "bg-white/15 text-white" }}
+                activeProps={{ className: cn("relative rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em]", scrolled || !isHome ? "bg-luxury/12 text-foreground" : "bg-white/15 text-white") }}
               >
                 {item.label}
+                <span className="absolute inset-x-3 -bottom-0.5 h-0.5 origin-center scale-x-0 rounded-full bg-luxury transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             ))}
             <div className="group relative ml-1">
-              <div className="pointer-events-none absolute right-0 top-full mt-2 w-60 translate-y-2 rounded-[1.5rem] border border-border bg-panel p-2 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+              <button type="button" className={cn("flex items-center gap-1 rounded-xl px-3 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-all", scrolled || !isHome ? "text-foreground/65 hover:bg-luxury/10 hover:text-foreground" : "text-white/75 hover:bg-white/10 hover:text-white")}>
+                More <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+              </button>
+              <div className="pointer-events-none absolute right-0 top-full mt-3 w-60 translate-y-2 rounded-2xl border border-luxury/20 bg-panel/95 p-2 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-xl transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
                 {navigationItems.slice(8).map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
-                    className="block rounded-2xl px-4 py-3 text-sm text-foreground/80 transition hover:bg-surface hover:text-foreground"
+                    className="block rounded-xl px-4 py-3 text-sm text-foreground/75 transition hover:bg-luxury/10 hover:text-foreground"
                   >
                     {item.label}
                   </Link>
