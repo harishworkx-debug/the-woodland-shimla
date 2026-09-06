@@ -109,11 +109,11 @@ function SiteHeader() {
   const isHome = location.pathname === "/";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-5">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 py-4 sm:px-6">
       <div className={cn("container-shell rounded-[1.7rem] transition-all duration-500", navClass)}>
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3 px-2 py-2 sm:px-3">
           <Link to="/" className="group flex min-w-0 items-center gap-3 rounded-2xl px-3 py-2">
-            <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-luxury/12 ring-1 ring-luxury/30 transition-transform duration-300 group-hover:rotate-[-4deg] group-hover:scale-105">
+            <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-luxury/15 ring-1 ring-luxury/45 shadow-[0_8px_24px_color-mix(in_oklab,var(--luxury)_22%,transparent)] transition-transform duration-300 group-hover:rotate-[-4deg] group-hover:scale-105">
               <img
                 src={woodlandLogo}
                 alt="Hotel Woodland Shimla logo"
@@ -165,7 +165,7 @@ function SiteHeader() {
 
           <div className="flex items-center justify-end gap-2">
             <MagneticButton>
-              <Button asChild variant="hero" size="sm" className="hidden lg:inline-flex">
+              <Button asChild variant="hero" size="sm" className="hidden min-h-11 px-6 lg:inline-flex">
                 <a href={`tel:${PHONE_TEL}`}>Book Now</a>
               </Button>
             </MagneticButton>
@@ -335,7 +335,7 @@ export function PageHero({
         style={{ y, opacity }}
       />
       <div className="hero-overlay absolute inset-0" />
-      <div className="section-shell relative flex min-h-[70vh] items-end pb-12 sm:pb-18">
+      <div className="section-shell relative flex min-h-[70vh] items-end pb-16 sm:pb-24">
         <div
           ref={splitRef}
           className={cn(
